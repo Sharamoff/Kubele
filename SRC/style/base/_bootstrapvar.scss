@@ -1,0 +1,31 @@
+// bootsrapvar redef
+
+$navbar-default-border:								transparent;
+$navbar-inverse-border:								transparent;
+$navbar-default-toggle-border-color:	transparent;
+$navbar-inverse-toggle-border-color: 	transparent;
+
+$pagination-color:                    #0072b4;
+$pagination-active-bg:                #aeb5bf;
+$pagination-active-color:							#ffffff;
+$pagination-active-border:						#aeb5bf;
+$pagination-border:										#aeb5bf;
+$pagination-hover-bg:									#e1e3e7;
+$pagination-hover-color:							#ff8000;
+$pagination-hover-border:							#aeb5bf;
+
+$tooltip-font-size:			1.2rem;
+$tooltip-max-width:			280px;
+$tooltip-padding-x:			2rem;
+//$tooltip-opacity: 			0.85;
+$tooltip-padding-y:     0.6rem;
+$tooltip-padding-x:     0.8rem;
+$tooltip-bg:  					#333333;
+
+$embed-responsive-aspect-ratios: (
+    (21 9),
+    (16 9),
+    (3 4),
+    (1 1),
+    (9 16)
+)

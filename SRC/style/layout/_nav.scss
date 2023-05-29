@@ -1,0 +1,451 @@
+///////////////////////////////////////////////
+
+
+
+// верхнее меню
+
+
+.navbar-custom {
+	padding-top: 30px;
+	justify-content: flex-start;
+
+	.navbar-nav {
+		font-size: $font-size-basemax;
+		color: $c-black;
+		margin: 3px 0 0 -20px;
+
+		.nav-item {
+			margin: 0;
+			padding: 0;
+		}
+
+		.nav-item-md {
+			display: block;
+			margin-bottom: -8px;
+
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
+
+			span {
+				display: inline-block;
+				padding: 2px 0 0 10px;
+				cursor: pointer;
+			}
+
+		}
+
+		.nav-link {
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $c-gray;
+			line-height: 1;
+			padding: 5px 10px;
+
+			@include media-breakpoint-down(lg) {
+				padding: 5px 8px;
+			}
+
+			&:hover,
+			&:focus {
+				background-color: $c-blue;
+				color: $c-white;
+			}
+
+		}
+
+	}
+
+	@include media-breakpoint-up(lg) {
+
+		.dropdown:hover .dropdown-menu {
+			display: block;
+		}
+
+		.dropdown-toggle::after {
+			display:none;
+		}
+
+	}
+
+
+	.dropdown-menu {
+		min-width: 20rem;
+		margin-top: -1px;
+		border-radius: 0;
+		overflow-x: auto;
+
+		.dropdown-item {
+			font-size: $font-size-base;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $c-gray;
+			line-height: 1;
+			padding: 10px 15px;
+
+			&:hover {
+				background-color: $c-blue;
+				color: $c-white;
+			}
+		}
+
+	}
+
+
+	.navbar-search {
+		display: none;
+
+		@include media-breakpoint-down(md) {
+			display: block;
+			width: 80%;
+			margin: 0 0 20px -10px;
+		}
+
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+		}
+
+		.fm-search {
+
+			input[type="search"] {
+				color: $c-white !important;
+				border: solid 1px $c-white;
+				background: rgba($c-black, 0.25) url("../img/lupa.svg") right no-repeat;
+				height: 33px;
+				border-radius: 0;
+				padding-left: 1rem !important;
+				padding-right: 3rem !important;
+			}
+
+			@include placeholder {
+				color: $c-white;
+			}
+
+		}
+
+	}
+
+
+	.navbar-search-md {
+		margin: 0 0 0 -0.8rem;
+		padding: 10px;
+		min-width: 30rem;
+		border: none;
+		background-color: rgba(255, 255, 255, 0.75);
+
+		@include media-breakpoint-only(lg) {
+			margin: -3px 0 0 -12rem;
+		}
+
+		.fm-search-md {
+
+			input[type="search"] {
+				color: $c-white !important;
+				border: solid 1px $c-white;
+				background: rgba($c-black, 0.25) url("../img/lupa.svg") right no-repeat;
+				height: 33px;
+				border-radius: 0;
+				padding-left: 1rem !important;
+				padding-right: 3rem !important;
+			}
+
+			@include placeholder {
+				color: $c-white;
+			}
+
+		}
+
+	}
+
+
+	.navbar-toggler {
+		width: 28px;
+		height: 24px;
+		padding: 0;
+		margin: -3px 0 0 0;
+
+		.navbar-toggler__icon {
+			width: 28px;
+			height: 24px;
+			background: url("../img/burger-o.svg") center center no-repeat;
+
+			&.close {
+				background: url("../img/burger-c.svg") center center no-repeat;
+			}
+
+		}
+
+	}
+
+
+	.navbar-lang {
+		position: absolute;
+		bottom: -4rem;
+		right: -19rem;
+
+		@include media-breakpoint-only(md) {
+			bottom: -3rem;
+			right: -18rem;
+		}
+
+		.navbar-lang__item {
+			margin: 0 0.3rem;
+			display: inline-block;
+			font-size: $font-size-fixsm;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $c-black;
+			padding: 2px 5px 2px 2px;
+			background-color: rgba(255,255,255,0.75);
+			border-radius: 3px;
+
+			&:hover {
+				background-color: $c-white;
+				color: $color-link-hover;
+			}
+
+			img {
+				width: 15px;
+				height: 15px;
+				margin-right: 5px;
+			}
+
+		}
+
+		span.navbar-lang__item,
+		span.navbar-lang__item:hover	{
+			background-color: rgba(0,0,0,0.35);
+			color: $c-white;
+		}
+
+	}
+
+	.navbar-cart {
+		display: inline-block;
+		position: absolute;
+		bottom: -4.4rem;
+		right: 0;
+		text-decoration: none;
+		font-size: $font-size-basemin;
+		text-transform: uppercase;
+		background: $c-white;
+		color: $c-gray-light;
+		padding: 4px 8px 4px 7px;
+		border-radius: 3px;
+
+		&:hover {
+			background: $color-link-hover;
+			color: $c-white;
+		}
+
+		.far {
+			font-size: 15px;
+			margin-right: 5px;
+		}
+
+	}
+
+	.navbar-cab {
+		display: none;
+	}
+
+	.navbar-phone {
+		display: none;
+		font-size: 2.1rem;
+		margin-bottom: 1.5rem;
+		font-family: $font-family-light;
+
+		span {
+			font-size: $font-size-basemin;
+			color: $c-gray-lighter;
+		}
+
+
+		@include media-breakpoint-down(xs) {
+		 display: block;
+		}
+
+	}
+
+	.nav-btn_search,
+	.nav-btn_cart {
+		display: none;
+	}
+
+}
+
+
+
+@include media-breakpoint-down(md) {
+
+	.navbar-dlv {
+		border-top: dotted 1px $c-gray-lightermore;
+		height: 1px;
+		margin: 1rem -10px 1.5rem -10px;
+	}
+
+	.navbar-custom {
+		display: block;
+		padding: 10px 0 0 0;
+
+		.navbar-nav {
+			padding: 0.5rem 0 1.5rem 0;
+			margin: 5px -10px 0 -10px !important;
+		}
+
+		.nav-item {
+			padding-top: 3px;
+			padding-bottom: 3px;
+		}
+
+		.navbar-lang {
+			position: static;
+			margin-bottom: 20px;
+			margin-left: -5px;
+		}
+
+		.navbar-cart {
+			position: static;
+			text-decoration: none;
+			font-size: $font-size-base;
+			text-transform: uppercase;
+			color: $c-gray;
+			margin: 0 0 0 -10px;
+
+
+			&:hover {
+				background: $color-link-hover;
+				color: $c-white;
+			}
+
+			.far {
+				font-size: 15px;
+				margin-right: 5px;
+			}
+
+			span {
+				display: inline-block !important;
+			}
+
+		}
+
+		.navbar-cab {
+			display: inline-block;
+			font-size: $font-size-base;
+			text-decoration: none;
+			margin: 0 0 3rem -10px;
+			color: $c-gray;
+			border-radius: $border-radius;
+			padding: 0.5rem 1rem 0.5rem 1rem;
+
+			&:before {
+				font-family: $fontawesome;
+				margin-right: 5px;
+				content: "\f007";
+				position: relative;
+				top: -1px;
+			}
+
+			&:hover {
+				background: $color-link-hover;
+				color: $c-white;
+
+				&:before {
+					color: $c-white;
+				}
+
+			}
+
+		}
+
+		.nav-btn_search {
+			position: relative;
+			top: -0.6rem;
+			display: inline-block;
+			border: none;
+			background: none;
+			color: $c-black;
+			font-size: 1.8rem;
+			margin: 0 0 0 2.5rem;
+			padding: 0;
+		}
+
+		.nav-btn_cart {
+			position: relative;
+			top: -0.6rem;
+			display: inline-block;
+			color: $c-black;
+			font-size: 1.8rem;
+			margin: 0 0 0 2rem;
+		}
+
+	}
+
+	.navbar-collapse {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+
+}
+
+
+
+.header.fixed {
+
+	.navbar-custom {
+		padding-top: 10px;
+
+		.navbar-search-md {
+			margin-top: -3px;
+		}
+
+		.navbar-search {
+
+			@include media-breakpoint-up(lg) {
+				display: none;
+			}
+
+		}
+
+		.navbar-cart {
+
+			span {
+				display: none;
+			}
+
+		}
+
+	}
+
+}
+
+
+.nav-md_search {
+	display: none;
+	max-width: 30rem;
+	padding: 0.5rem 0 1rem 0;
+
+	@include media-breakpoint-down(md) {
+		display: block;
+	}
+
+	@include media-breakpoint-down(xs) {
+		max-width: 100%;
+	}
+
+
+	input[type="search"] {
+		color: $c-white !important;
+		border: solid 1px $c-white;
+		background: rgba($c-black, 0.25) url("../img/lupa.svg") right no-repeat;
+		height: 33px;
+		border-radius: 0;
+		padding-left: 1rem !important;
+		padding-right: 3rem !important;
+	}
+
+	@include placeholder {
+		color: $c-white;
+	}
+
+}

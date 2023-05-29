@@ -1,0 +1,82 @@
+///////////////////////////////////////////////
+
+
+
+// панель инструментальная
+
+
+.block-tools-h {
+  float: right;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: -2.5rem;
+  font-size: $font-size-basemin;
+
+  @include media-breakpoint-down(sm) {
+    float: none;
+    top: 0;
+    margin-top: 3rem;
+    margin-bottom: -1.5rem;
+    justify-content: space-between;
+  }
+
+
+  div {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+      margin-right: 0.5rem;
+    }
+
+  }
+
+  i {
+    color: $c-blue-dark;
+    margin-right: 0.5rem;
+  }
+
+
+
+  .tools-h__name {
+    font-weight: bold;
+    color: $c-black;
+  }
+
+  .tools-h__setup {
+    font-size: $font-size-basemax;
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    position: relative;
+    top: -0.2rem;
+
+    a {
+
+      i {
+        color: $color-link;
+
+        &:hover {
+          color: $color-link-hover;
+        }
+
+      }
+
+    }
+
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

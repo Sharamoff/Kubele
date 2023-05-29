@@ -1,0 +1,399 @@
+///////////////////////////////////////////////
+
+
+
+// таблицы
+
+
+.table {
+	margin-top: 0;
+	margin-bottom: 3rem;
+	background-color: $c-white;
+
+	th {
+		padding: 0.8rem 0.5rem;
+		background: $c-gray-lightermore;
+		line-height: $line-height-min;
+		font-size: $font-size-fixsm;
+		color: $c-black;
+		border-left: solid 1px $c-white;
+		text-align: center;
+		vertical-align: center !important;
+
+		a {
+			text-decoration: none;
+			color: $c-black;
+		}
+
+		&:first-child {
+			border-left: 0;
+		}
+
+	}
+
+	td {
+		padding: 0.8rem 1rem !important;
+		line-height: $line-height-def;
+		vertical-align: middle !important;
+	}
+
+	@include media-breakpoint-down(xs) {
+		th,
+		td {
+			font-size: $font-size-basemin;
+			padding: 0.5rem !important;
+		}
+	}
+
+	.tbth_filter {
+
+		th {
+			padding: 0 5px 5px 5px;
+			border-top: solid 1px $c-gray-lightermore;
+		}
+
+	}
+
+	.multiselect-native-select {
+
+		.multiselect_btn-group {
+			position: relative;
+			display: inline-flex;
+			vertical-align: middle;
+			width: 100%;
+		}
+
+		.multiselect_btn {
+			background: transparentize($c-white, 0.5) !important;
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			color: $color-text;
+			font-weight: normal;
+			font-size: $font-size-basemin;
+			padding: 0.5rem;
+			border-radius: 0;
+			border: none;
+			box-shadow: none;
+		}
+
+		.multiselect-container {
+			background: transparentize(#eeeeee, 0.1);
+			font-size: $font-size-basemin;
+			border: none;
+			border-radius: 0;
+			min-width: 15rem;
+
+			li {
+				margin: 1rem 0.5rem !important;
+			}
+
+			label {
+				color: $color-text;
+				padding: 0;
+				white-space: nowrap;
+			}
+
+			input {
+				height: 1.4rem !important;
+				width: 1.4rem !important;
+				margin-right: 5px;
+				float: left;
+			}
+
+		}
+
+	}
+
+}
+
+
+
+
+
+
+.td--price {
+	text-align: right !important;
+	color: $c-red;
+	white-space: nowrap;
+}
+
+.td--cart {
+	padding: 0 !important;
+	width: 1%;
+
+	button,
+	a {
+		display: inline-block;
+		border: none;
+		background: $c-white;
+		color: $color-link;
+		padding: 0.5rem 1rem;
+		margin: 0;
+
+		i {
+			font-size: 1.6rem;
+		}
+
+		&:hover {
+			color: $color-link-hover;
+		}
+
+	}
+
+}
+
+
+.th--up {
+	margin-right: -5px;
+
+	&:after {
+		font-family: $fontawesome;
+		font-weight: bold;
+		font-size: 14px;
+		color: $c-gray-lighter;
+		content: '\f0d8';
+		margin-left: 0.5rem;
+	}
+
+}
+
+.th--down {
+	margin-right: -5px;
+
+	&:after {
+		font-family: $fontawesome;
+		font-weight: bold;
+		font-size: 14px;
+		color: $c-gray-lighter;
+		content: '\f0d7';
+		margin-left: 0.5rem;
+	}
+
+}
+
+
+.td--left {text-align: left !important;}
+.td--centered {text-align: center !important;}
+.td--right {text-align: right !important;}
+
+
+
+.table_cart {
+	width: 100%;
+
+	th {
+		padding: 0.8rem 0.5rem;
+		background: $c-blue-dark;
+		line-height: $line-height-min;
+		font-size: $font-size-fixsm;
+		text-transform: uppercase;
+		color: $c-white;
+		border-left: solid 1px transparentize($c-white, 0.5);
+		text-align: center;
+		vertical-align: center !important;
+
+		&:first-child {
+			border-left: 0;
+		}
+
+	}
+
+	td {
+		padding: 1rem !important;
+		line-height: $line-height-def;
+		vertical-align: top !important;
+		color: $color-text;
+		background-color: transparentize($c-white, 0.3);
+		border-bottom: solid 1px transparentize($c-blue, 0.5);
+		border-right: solid 1px transparentize($c-blue, 0.85);
+
+		&:last-child {
+			border-right: 0;
+		}
+
+	}
+
+	tfoot {
+
+		td {
+			background-color: transparent;
+			border: 0;
+			padding-top: 0.6rem !important;
+			padding-bottom: 0.6rem !important;
+		}
+
+		.tfoot--name {
+			text-align: right;
+			text-transform: uppercase;
+			font-size: $font-size-base;
+			font-weight: bold;
+			color: $c-white;
+			background-color: $c-blue-dark;
+		}
+
+		.tfoot--sum {
+			text-align: right;
+			text-transform: uppercase;
+			font-size: $font-size-base;
+			font-weight: bold;
+			color: $c-red;
+			background-color: $c-white;
+			white-space: nowrap;
+		}
+
+	}
+
+	@include media-breakpoint-down(xs) {
+
+		th,
+		td {
+			font-size: $font-size-basemin;
+			padding: 0.5rem !important;
+		}
+
+		th {
+			font-weight: normal;
+			text-transform: none;
+		}
+
+	}
+
+	.td--name {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.td--quant {
+		text-align: center;
+	}
+
+	.td--price {
+		text-align: right;
+		color: $c-red;
+		white-space: nowrap;
+	}
+
+}
+
+.table_sub {
+	margin-top: 0.5rem;
+
+	td {
+		padding: 0.2rem 1rem 0.2rem 0  !important;
+		line-height: $line-height-def;
+		vertical-align: top !important;
+		text-transform: none;
+		font-size: $font-size-basemin;
+		font-weight: normal;
+		border: none;
+		background: none;
+
+		&.prop {
+			color: $c-gray-light !important;
+		}
+
+		&.val {
+			color: $c-black !important;
+		}
+
+	}
+
+	@include media-breakpoint-down(xs) {
+
+		td {
+			font-size: $font-size-basemin;
+			padding: 0.2rem 0.5rem 0.2rem 0  !important;
+		}
+
+	}
+
+
+
+
+}
+
+
+
+// таблица на слоях
+
+.divtable {
+	margin: 3rem 0;
+	background: $c-white;
+	color: $c-gray;
+	border-top: solid 1px $c-gray-lightermore;
+
+	.row {
+		display: flex;
+		flex-flow: row wrap;
+		border-bottom: solid 1px $c-gray-lightermore;
+		margin-top: -1px;
+		margin-left: 0;
+		margin-right: 0;
+
+		@include media-breakpoint-down(xs) {
+			display: block;
+			padding-top: 1rem;
+			padding-bottom: 1.5rem;
+		}
+
+		&.row--th {
+
+			@include media-breakpoint-down(xs) {
+				display: none;
+			}
+
+		}
+
+		&.row--td {
+
+		}
+
+	}
+
+	&.divtable--hovered {
+
+		.row--td:hover {
+			background-color: transparentize($c-gray-lightermore, 0.5);
+			cursor: pointer;
+		}
+
+	}
+
+
+	.dt-th {
+		padding: 0.8rem 1rem;
+		background: $c-gray-lightermore;
+		line-height: $line-height-min;
+		font-size: $font-size-fixsm;
+		color: $c-black;
+		border-left: solid 1px $c-white;
+
+		a {
+			text-decoration: none;
+			color: $c-black;
+		}
+
+		&:first-child {
+			border-left: 0;
+		}
+
+	}
+
+	.dt-td {
+		padding: 0.8rem 1rem;
+		line-height: $line-height-def;
+		vertical-align: middle;
+		font-size: $font-size-basemin;
+
+		@include media-breakpoint-down(xs) {
+			padding-top: 0.1rem;
+			padding-bottom: 0.1rem;
+		}
+
+	}
+
+}
+
+
+

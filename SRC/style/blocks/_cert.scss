@@ -1,0 +1,33 @@
+///////////////////////////////////////////////
+
+
+
+// сертификаты
+
+.sc_certificates {
+
+}
+
+
+
+
+.block-certlist {
+	display: inline-block;
+	text-align: center;
+
+	img {
+		width: 100%;
+		max-width: $blockpic-max;
+		height: auto;
+		border: solid 0.3rem transparent;
+	}
+
+	&:hover {
+
+		img {
+			border: solid 0.3rem transparentize($c-white, 0.5);
+		}
+
+	}
+
+}

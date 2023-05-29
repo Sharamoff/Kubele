@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<title>Kubele</title>
+
+	<link href="css/vendor.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/addit.css" rel="stylesheet">
+	<link rel="stylesheet" href="style/elements/_tables.scss">
+
+</head>
+
+<body>
+
+
+
+
+
+
+<div class="pagewrap">
+
+
+
+	//= layout/_header.html
+
+
+
+
+
+	<div class="pagecontent">
+	<div class="container">
+
+
+
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">Главная</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Пресса</li>
+			</ol>
+		</nav>
+
+
+
+		<h1>Пресса</h1>
+
+
+
+		<div class="page-body">
+
+
+			<form name="fm-press" id="id_fm-press" action="" class="needs-validation" novalidate>
+
+				<div class="form-group row">
+					<label class="col-sm-4">Как в Вам обращаться?</label>
+					<div class="col-sm-8">
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+							<label class="form-check-label" for="inlineRadio1">Господин</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+							<label class="form-check-label" for="inlineRadio2">Госпожа</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="fm-press__firm" class="col-sm-4">Фирма:</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="fm-press__firm">
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="fm-press__name" class="col-sm-4">*&nbsp;Фамилия:</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="fm-press__name" required>
+						<div class="invalid-feedback">Пожалуйста, заполните поле</div>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="fm-press__subname" class="col-sm-4">*&nbsp;Имя:</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="fm-press__subname" required>
+						<div class="invalid-feedback">Пожалуйста, заполните поле</div>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="fm-press__street" class="col-sm-4">*&nbsp;Улица/№:</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="fm-press__street" required>
+						<div class="invalid-feedback">Пожалуйста, заполните поле</div>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="fm-press__index" class="col-sm-4">*&nbsp;Почтовый&nbsp;индекс:</label>
+					<div class="col-sm-6">
+						<input type="text" class="form-control" id="fm-press__index" required>
+						<div class="invalid-feedback">Пожалуйста, заполните поле</div>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="fm-press__city" class="col-sm-4">*&nbsp;Населенный&nbsp;пункт:</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" id="fm-press__city" required>
+						<div class="invalid-feedback">Пожалуйста, заполните поле</div>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="fm-press__country" class="col-sm-4">*&nbsp;Страна:</label>
+					<div class="col-sm-8">
+						<select class="form-control" id="fm-press__country" required>
+							<option value="10" selected>Россия</option>
+							<option value="12">Беларусь</option>
+							<option value="3">Казахстан</option>
+						</select>
+						<div class="invalid-feedback">Пожалуйста, заполните поле</div>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="fm-press__tel" class="col-sm-4">*&nbsp;Телефон:</label>
+					<div class="col-sm-6">
+						<input type="tel" class="form-control" id="fm-press__tel" required>
+						<div class="invalid-feedback">Пожалуйста, заполните поле</div>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="fm-press__email" class="col-sm-4">*&nbsp;E-mail:</label>
+					<div class="col-sm-6">
+						<input type="tel" class="form-control" id="fm-press__email" required>
+						<div class="invalid-feedback">Пожалуйста, заполните поле</div>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="fm-press__textarea" class="col-sm-4">*&nbsp;Сообщение:</label>
+					<div class="col-sm-8">
+						<textarea class="form-control" id="fm-press__textarea" rows="5" required></textarea>
+						<div class="invalid-feedback">Пожалуйста, заполните поле</div>
+					</div>
+				</div>
+
+				<br>
+
+				<p>Заполните все обозначенные * поля.</p>
+
+				<br>
+
+				<div class="form-group row">
+					<div class="col">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="fm-press__check" required>
+							<label class="form-check-label" for="fm-press__check">
+								<strong>Выражение согласия с Положением о защите персональных данных</strong>
+							</label>
+							<div class="invalid-feedback">Пожалуйста, заполните поле</div>
+							<p class="form--note">Я согласен на постоянное хранение моих данных с целью установления контактов и идентификации. Согласие может быть отозвано в любоое время.</p>
+						</div>
+					</div>
+				</div>
+
+				<br>
+
+				<div class="row">
+					<button class="btn m-auto" type="submit">ОТПРАВКА ЗАКАЗА</button>
+				</div>
+
+			</form>
+
+
+		</div>
+
+
+
+	</div>
+	</div>
+
+
+
+</div>
+
+
+
+
+
+//= layout/_footer.html
+
+
+
+
+//= layout/_modal.html
+
+
+
+
+
+<script src="js/vendor.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

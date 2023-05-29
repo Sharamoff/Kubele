@@ -1,0 +1,305 @@
+.modal-dialog {
+
+	.modal-content {
+		padding: 0 !important;
+		background: transparentize($c-white, 0.10) !important;
+	}
+
+	.modal-header {
+		position: relative;
+		padding: 0.5rem 3rem;
+		margin: 0;
+		color: $c-gray;
+		border-color: transparent;
+		background: $c-gray-lightermore;
+
+		@include media-breakpoint-only(xs) {
+			padding: 1.5rem;
+		}
+
+		.mainhdr {
+			font-size: $font-size-h2;
+			color: $c-gray-lightermore;
+			text-shadow: none;
+			margin: 0;
+		}
+
+		button.close {
+			position: absolute;
+			top: -0.9rem;
+			right: 0.5rem;
+			color: $c-black;
+			font-size: 5rem;
+			font-weight: lighter;
+		}
+
+	}
+
+	.modal-body {
+		padding: 1.5rem 3rem;
+		overflow-y: auto;
+		color: $color-text;
+		@include clearfix;
+
+		@include media-breakpoint-only(xs) {
+			padding: 0.5rem 1.5rem;
+			max-height: initial;
+		}
+
+	}
+
+}
+
+
+
+#modal_region {
+	padding: 0 !important;
+
+	.modal-dialog {
+		min-width: 99%;
+		margin: 1rem auto;
+
+		@include media-breakpoint-only(xs) {
+			min-width: 100%;
+			margin: 0;
+		}
+
+	}
+
+	.hdr-region {
+		font-size: $font-size-basemax;
+		font-weight: bold;
+		color: $c-gray;
+		margin-top: 0.3rem;
+
+		&:before {
+			font-family: $fontawesome;
+			color: $c-gray-lighter;
+			margin-right: 5px;
+			content: "\f3c5";
+		}
+
+	}
+
+	.fm-search {
+		float: right;
+		margin-right: 3rem;
+
+		i {
+			color: $c-gray-light;
+		}
+
+		input[type="search"]{
+			font-size: $font-size-basemin !important;
+			padding: 0 1rem !important;
+			height: 2.5rem !important;
+			border: solid 1px $c-gray-lighter;
+			border-radius: 3rem;
+		}
+
+	}
+
+	.modal-body {
+		font-size: $font-size-basemin;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.lither {
+		font-size: $font-size-base;
+		font-weight: bold;
+		color: $c-black;
+	}
+
+}
+
+
+
+
+#modal_delivery {
+	padding: 0 !important;
+
+	.modal-dialog {
+		min-width: 90%;
+		margin: 1rem auto;
+
+		@include media-breakpoint-only(xs) {
+			min-width: 100%;
+			margin: 0;
+		}
+
+	}
+
+	.modal-header {
+		padding: 1.5rem 3rem 0 3rem;
+
+		@include media-breakpoint-only(xs) {
+			padding: 1.5rem 1.5rem 0 1.5rem;
+		}
+
+	}
+
+	.nav-link {
+		text-transform: uppercase;
+		text-decoration: none;
+		background-color: transparentize($c-white, 0.5);
+		padding: 1rem 2rem;
+		margin-right: 1rem;
+		margin-bottom: 1rem;
+
+		@include media-breakpoint-only(xs) {
+			padding: 0.8rem;
+			margin-right: 0.5rem;
+			margin-bottom: 0.5rem;
+		}
+
+		&.active {
+			background-color: $c-blue;
+		}
+
+		img {
+			margin-right: 1rem;
+
+			@include media-breakpoint-only(xs) {
+				display: none;
+			}
+
+		}
+
+	}
+
+
+	.modal-body {
+		min-height: 60vh !important;
+	}
+
+	h2 {
+		text-transform: uppercase;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+		color: $c-black;
+	}
+
+	h3 {
+		text-transform: uppercase;
+		font-size: $font-size-basemax;
+	}
+
+	.tab-plane {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+		font-size: $font-size-basemin;
+	}
+
+	.hdr {
+		font-size: $font-size-basemax;
+		font-weight: bold;
+		line-height: $line-height-hdr;
+		min-height: 3.5rem;
+	}
+
+	.subhdr {
+		font-size: $font-size-base;
+		font-weight: bold;
+		margin-top: 1.6rem;
+		margin-bottom: 0.8rem;
+		line-height: $line-height-hdr;
+	}
+
+	.dlvr-plane {
+		margin-top: 3rem;
+
+		span {
+			display: inline-block;
+			font-size: $font-size-basemin;
+			color: $c-gray-light;
+			margin-bottom: 0.5rem;
+		}
+
+		&__type {
+			margin-bottom: 1.5rem;
+
+			p {
+				display: inline-block;
+				padding: 0.3rem 1.2rem 0.5rem 1.2rem;
+				border-radius: 4px;
+				background-color: $c-gray;
+				color: $c-white;
+				font-size: 1.6rem;
+				font-weight: bold;
+			}
+
+		}
+
+		&__address {
+			margin-bottom: 2rem;
+
+			input {
+				width: 60%;
+			}
+
+		}
+
+		&__price {
+			margin-bottom: 2rem;
+
+			p {
+				font-size: 2.5rem;
+				font-weight: bold;
+				line-height: 1;
+			}
+
+		}
+
+		&__date {
+			margin-bottom: 2rem;
+
+			p {
+				font-size: 2.1rem;
+				font-weight: bold;
+				line-height: 1;
+			}
+
+		}
+
+
+	}
+
+	.install-plane {
+		margin-top: 3rem;
+
+		.install-plane__itemprice {
+			border-bottom: solid 1px $color-border;
+			padding-bottom: 0.5rem;
+			font-size: $font-size-basemax;
+
+			.itemprice_item {
+				font-weight: bold;
+			}
+
+			.itemprice_price {
+				text-align: right;
+				font-weight: bold;
+			}
+
+		}
+
+		.install-plane__plane {
+			margin-top: 3rem;
+
+			ul {
+				margin-bottom: 3rem;
+			}
+
+		}
+
+	}
+
+}
+
+
+
+

@@ -1,0 +1,22 @@
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+
+
+
+@mixin background-image-retina($file, $type, $width, $height) {
+  background-image: url($file + '.' + $type);
+  -webkit-background-size: $width $height;
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 144dpi) {
+	& {
+	  background-image: url($file + '@2x.' + $type);
+	}
+  }
+}
+
+

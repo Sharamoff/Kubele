@@ -1,0 +1,92 @@
+.bar-bottom {
+	display: none;
+	height: 3.3rem;
+	background-color: $c-white;
+	font-size: $font-size-basemin;
+	color: $c-gray;
+
+	@include media-breakpoint-down(md) {
+		display: flex;
+		padding: 0;
+	}
+
+	.container {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+}
+
+.bar-bottom-l {
+
+}
+
+.bar-bottom-l__phone {
+	font-family: $font-family-light;
+	font-size: $font-size-basemax;
+	white-space: nowrap;
+
+}
+
+
+
+.bar-bottom-r {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+}
+
+.bar-bottom-l__socicons {
+
+	a {
+		display: inline-block;
+		text-decoration: none;
+		color: $c-gray-light;
+		line-height: 1;
+		font-size: 2.1rem;
+		margin-left: 1.5rem;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

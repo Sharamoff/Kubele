@@ -1,0 +1,93 @@
+///////////////////////////////////////////////
+
+
+
+// сервисные кнопки
+
+
+
+.block-servbtn-idx {
+	display: block;
+
+	@include media-breakpoint-down(md) {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		z-index: 3;
+		margin-top: -12rem;
+		margin-left: -15px;
+	}
+
+	.servbtn-idx {
+		display: inline-block;
+		border: solid 3px $c-white;
+		background-color: rgba(0, 0, 0, 0.5);
+		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.35);
+		margin: 1.5rem 0 3rem 1.5rem;
+		padding: 5px;
+		opacity: 0.75;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		img {
+			width: 50px;
+			height: 50px;
+
+			@include media-breakpoint-only(xs) {
+				width: 40px;
+				height: 40px;
+			}
+
+		}
+
+	}
+
+}
+
+
+
+.block-servbtn {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 5rem;
+
+	@include media-breakpoint-down(md) {
+		justify-content: flex-start;
+		margin-top: 1.5rem;
+	}
+
+	.servbtn {
+		display: inline-block;
+		border: solid 3px $c-white;
+		background: linear-gradient( 0deg, rgba(62,114,170,0.15) 0%, rgba(62,114,170,0.75) 100%);
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+		margin: 0 0 1rem 1rem;
+		padding: 5px;
+		opacity: 0.75;
+
+		@include media-breakpoint-down(md) {
+			margin: 0 0.8rem 0.8rem 0;
+			border: solid 2px $c-white;
+			padding: 3px;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+
+		img {
+			width: 40px;
+			height: 40px;
+
+			@include media-breakpoint-down(md) {
+				width: 30px;
+				height: 30px;
+			}
+
+		}
+
+	}
+
+}

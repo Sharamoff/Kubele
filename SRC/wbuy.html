@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<title>Kubele</title>
+
+	<link href="css/vendor.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/addit.css" rel="stylesheet">
+	<link rel="stylesheet" href="style/elements/_tables.scss">
+
+</head>
+
+<body>
+
+
+
+
+
+
+<div class="pagewrap">
+
+
+
+	//= layout/_header.html
+
+
+
+
+
+	<div class="pagecontent">
+	<div class="container">
+
+
+
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">Главная</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Где купить?</li>
+			</ol>
+		</nav>
+
+
+
+		<h1>Где купить?</h1>
+
+
+
+		<section class="sc_wbuy-filter">
+			<form name="fm_wbuy-filter" id="id_wbuy-filter" action="">
+<!--
+				<div class="form-group row">
+					<div class="col-sm-3"></div>
+					<div class="col-sm-9">
+						<button class="b-fmtool">Использовать мое местоположение</button>
+					</div>
+				</div>
+-->
+				<div class="form-group row">
+					<label for="fm_wbuy-filter__city" class="col-sm-3 col-md-2">Город:</label>
+					<div class="col-sm-9 col-md-10">
+						<select class="form-control" id="fm_wbuy-filter__city" required>
+							<option value="10" selected>любой</option>
+							<option value="12">Москва</option>
+							<option value="3">Санкт-Петербург</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="fm_wbuy-filter__dist" class="col-sm-3 col-md-2">В радиусе:</label>
+					<div class="col-sm-3">
+						<select class="form-control" id="fm_wbuy-filter__dist" required>
+							<option value="1" selected>1 км</option>
+							<option value="3">3 км</option>
+							<option value="5">5 км</option>
+							<option value="10">10 км</option>
+							<option value="15">15 км</option>
+							<option value="20">20 км</option>
+							<option value="25">25 км</option>
+							<option value="50">50 км</option>
+							<option value="100">100 км</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label for="fm_wbuy-filter__wbuy" class="col-sm-3 col-md-2">Где купить:</label>
+					<div class="col-sm-9 col-md-10">
+						<select class="form-control" id="fm_wbuy-filter__wbuy" required>
+							<option value="1" selected>любое</option>
+							<option value="2">Авторизированные интернет-магазины</option>
+							<option value="3">Фирменные магазины</option>
+							<option value="4">Авторизироанные дилеры</option>
+							<option value="5">Дистрибьюторы</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="row">
+					<button class="btn m-auto" type="submit">НАЙТИ</button>
+				</div>
+
+			</form>
+		</section>
+
+
+
+		<section class="sc_wbuy-map">
+			<div class="wbuy-ymap" id="id_wbuy-ymap"></div>
+		</section>
+
+
+
+		<section class="sc_wbuy-result">
+			<div class="divtable divtable--hovered">
+				<div class="row row--th">
+					<div class="col-sm-4 dt-th">Фирма</div>
+					<div class="col-sm-4 dt-th">Адрес</div>
+					<div class="col-sm-2 dt-th">Город</div>
+					<div class="col-sm-2 dt-th">Маршрут</div>
+				</div>
+				<div class="row row--td">
+					<div class="col-sm-4 dt-td"><strong>ООО «Сантехника-Онлайн»</strong></div>
+					<div class="col-sm-4 dt-td">пос. Беседы, ул. Ленинская 14/2</div>
+					<div class="col-sm-2 dt-td">Москва и МО</div>
+					<div class="col-sm-2 dt-td"><a href="#">маршрут</a></div>
+				</div>
+				<div class="row row--td">
+					<div class="col-sm-4 dt-td"><strong>ООО «АЛАТИ»</strong></div>
+					<div class="col-sm-4 dt-td">Промышленный проезд, д.9, Индустриальный парк "РЕАЛ"</div>
+					<div class="col-sm-2 dt-td">Москва и МО</div>
+					<div class="col-sm-2 dt-td"><a href="#">маршрут</a></div>
+				</div>
+			</div>
+		</section>
+
+
+
+	</div>
+	</div>
+
+
+
+</div>
+
+
+
+
+
+//= layout/_footer.html
+
+
+
+
+//= layout/_modal.html
+
+
+
+
+
+<script src="js/vendor.js"></script>
+<script src="js/main.js"></script>
+
+
+
+
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		ymaps.ready(init);
+
+		function init(){
+
+			var mywBuyMap = new ymaps.Map ("id_wbuy-ymap", {
+				center: [55.76, 37.64],
+				zoom: 10
+			});
+
+			mywBuyPlacemark1 = new ymaps.Placemark([55.687569, 37.570572], {
+				hintContent: 'ООО «Сантехника-Онлайн»',
+				balloonContent: '<strong>ООО «Сантехника-Онлайн»</strong><br>' +
+					'Москва и МО, пос. Беседы, ул. Ленинская 14/2<br>' +
+					'Тел: +7 (495) 665-70-75<br>' +
+					'Часы работы: с 08:00 до 01:00, без выходных<br>' +
+					'<a href="https://www.santehnika-online.ru" target="_blank">www.santehnika-online.ru</a>'
+			}, {
+				preset: 'islands#dotIcon',
+				iconColor: '#3e72aa'
+			});
+
+			mywBuyPlacemark2 = new ymaps.Placemark([55.790139, 37.814052], {
+				hintContent: 'ООО «АЛАТИ»',
+				balloonContent: '<strong>ООО «АЛАТИ»</strong><br>' +
+					'Москва и МО, МО, Ленинский р-н, с. Беседы,<br>' +
+					'Промышленный проезд, д.9, Индустриальный парк "РЕАЛ"<br>' +
+					'Тел: +7 (495) 646-25-66<br>' +
+					'Часы работы: пн-пт с 10:00 до 19:00<br>' +
+					'<a href="https://www.alati.ru" target="_blank">www.alati.ru</a>'
+			}, {
+				preset: 'islands#dotIcon',
+				iconColor: '#96004b'
+			});
+
+			mywBuyMap.geoObjects
+				.add(mywBuyPlacemark1)
+				.add(mywBuyPlacemark2);
+
+			mywBuyMap.behaviors.disable('scrollZoom');
+
+		}
+
+	});
+</script>
+
+
+
+
+
+</body>
+</html>

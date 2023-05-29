@@ -1,0 +1,92 @@
+///////////////////////////////////////////////
+
+
+
+// заголовки
+
+H1 {
+	font-family: $font-family-base;
+	font-size: $font-size-h1;
+	font-weight: bold;
+	color: $color-h;
+	margin-top: 5rem;
+	line-height: $line-height-min;
+	text-transform: uppercase;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+	@include media-breakpoint-down(md) {
+		margin-top: 3rem;
+	}
+
+	span {
+		font-size: 3rem;
+	}
+
+	&.cgitem-title {
+		font-size: 1.8rem;
+		color: $c-gray;
+		line-height: 1.2;
+		margin-top: 6rem;
+
+		@include media-breakpoint-down(md) {
+			margin-top: 1.5rem;
+		}
+
+		span {
+			font-size: 1.8rem;
+		}
+
+	}
+
+}
+
+.mainhdr {
+	font-family: $font-family-base;
+	font-size: $font-size-h1;
+	font-weight: bold;
+	color: $color-h;
+	margin-top: 5rem;
+	line-height: $line-height-min;
+	text-transform: uppercase;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+	span {
+		font-size: 3rem;
+	}
+
+}
+
+H2 {
+	font-family: $font-family-base;
+	font-size: $font-size-h2;
+	font-weight: bold;
+	line-height: $line-height-min;
+	margin-top: 3rem;
+	margin-bottom: 1.5rem;
+	color: $c-black;
+
+	sup {
+		font-size: $font-size-base;
+	}
+
+}
+
+H3 {
+	font-size: $font-size-base;
+	font-weight: bold;
+	line-height: $line-height-def;
+	margin-top: 1.2rem;
+	margin-bottom: 1rem;
+}
+
+
+H1 A, H2 A, .mainhead A {text-decoration:none;}
+
+
+
+
+
+
+
+
+

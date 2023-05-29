@@ -1,0 +1,61 @@
+///////////////////////////////////////////////
+
+
+
+// размеры
+
+
+.sc_sizes {
+
+}
+
+
+.block-sizes {
+
+	.panel_sizes {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		background: $color-bk-page;
+		color: $color-text;
+		padding: 0 0.5rem 1rem 0.5rem;
+
+		h2 {
+			display: block;
+			text-align: center;
+			position: relative;
+			font-size: 3rem;
+			font-weight: bold;
+			background-color: $c-blue-dark;
+			color: $c-white;
+			padding: 0.5rem;
+			line-height: 1;
+			margin: 0 -0.5rem 1.5rem -0.5rem;
+		}
+
+	}
+
+	.sizes__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		a {
+			display: inline-block;
+			min-width: 8rem;
+			margin: 0.8rem;
+			padding: 0.3rem 0.5rem;
+			background-color:$c-blue-light;
+			color: $c-white;
+			text-decoration: none;
+
+			&:hover {
+				color: $c-white;
+				background-color:$color-link-hover;
+			}
+
+		}
+
+	}
+
+}

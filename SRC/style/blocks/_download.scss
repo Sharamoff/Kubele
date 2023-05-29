@@ -1,0 +1,144 @@
+///////////////////////////////////////////////
+
+
+
+// скачать
+
+.sc_dwnlexplorer {
+	background-color: transparentize($c-blue, 0.3);
+	padding: 3rem;
+	margin-bottom: 5rem;
+	color: $c-white;
+
+	h2 {
+		font: bold $font-size-basemax $font-family-base;
+		line-height: $line-height-def;
+		color: $c-white;
+		text-transform: uppercase;
+	}
+	> h2 {
+		margin-top: 0;
+	}
+
+	@include media-breakpoint-down(md) {
+		padding: 1.5rem;
+		margin-top: 3rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.dwnlexplorer-search {
+		margin: -1rem -1.5rem;
+
+		@include media-breakpoint-down(md) {
+			margin: 0 0 -1rem 0;
+		}
+
+		input[type="search"] {
+			color: $c-gray !important;
+			border: solid 1px $c-blue;
+			background: rgba($c-white, 0.85) url("../img/lupa_b.svg") right no-repeat;
+			height: 33px;
+			border-radius: 3rem;
+			padding-left: 1.5rem !important;
+			padding-right: 3rem !important;
+		}
+
+	}
+
+}
+
+.tree__ct {
+	color: $c-white;
+	padding: 0;
+
+	ul {
+		padding-left: 3rem;
+	}
+
+	span {
+		margin-left: -0.5rem;
+		margin-right: 0.8rem;
+
+	}
+
+	a {
+		color: $c-white;
+	}
+
+	.bstree-chevron {
+		position: relative;
+		font-size: 2.1rem;
+		top: 0.3rem;
+		padding-left: 0.5rem;
+		border-radius: 3px;
+
+		&:hover {
+			background-color: transparentize($c-white, 0.7);
+		}
+
+	}
+
+
+
+}
+
+
+
+
+
+.sc_dwnlres {
+	background-color: $color-bk-page;
+	padding: 3rem;
+	margin-bottom: 5rem;
+	color: $c-gray;
+
+	h2 {
+		font: bold $font-size-basemax $font-family-base;
+		line-height: $line-height-def;
+		text-transform: uppercase;
+	}
+	> h2 {
+		margin-top: 0;
+	}
+
+	@include media-breakpoint-down(md) {
+		padding: 1.5rem;
+		margin-top: 0;
+		margin-bottom: 3rem;
+	}
+
+}
+
+.block-dwnlreslist {
+	display: inline-block;
+	text-align: center;
+	padding: 0.3rem;
+	margin: 0 -0.3rem 3rem -0.3rem;
+	text-decoration: none;
+
+	@include media-breakpoint-down(md) {
+		margin: 0 -0.3rem 1.5rem -0.3rem;
+	}
+
+	&:hover {
+		background: $c-white;
+		text-decoration: underline;
+	}
+
+	img {
+		width: 100%;
+		max-width: $blockpic-max;
+		height: auto;
+		border: solid 1px $c-white;
+	}
+
+	.dwnlreslist__desc {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+		font-size: $font-size-base;
+		line-height: $line-height-min;
+	}
+
+
+}
+

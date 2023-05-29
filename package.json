@@ -1,0 +1,22 @@
+{
+  "name": "Kubele",
+  "version": "1.0.0",
+  "homepage": "http://www.kubele.com/",
+  "description": "Kubele",
+  "moduleType": "globals",
+  "author": "Promoting",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cache": "^1.1.1",
+    "gulp-cli": "^2.3.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^5.1.0",
+    "npm": "^8.6.0",
+    "rimraf": "^3.0.2",
+    "sass": "~1.32.6"
+  }
+}

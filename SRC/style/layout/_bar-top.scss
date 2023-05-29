@@ -1,0 +1,57 @@
+.bar-top {
+	background-color: $c-blue-dark;
+	font-size: $font-size-base;
+	color: $c-white;
+	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+	@include media-breakpoint-down(md) {
+		font-size: $font-size-basemin;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

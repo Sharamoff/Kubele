@@ -1,0 +1,80 @@
+///////////////////////////////////////////////
+
+
+
+// сервис
+
+
+.servlistlinks-plate {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+
+	@include media-breakpoint-down(md) {
+		margin-top: 1.5rem;
+		margin-bottom: -3rem;
+	}
+
+	.row {
+		margin-right: -1.5rem;
+		margin-left: 0;
+
+		> [class*="col-"] {
+			padding: 0 1.5rem 0 0;
+		}
+
+	}
+
+}
+
+.block-servlist_link {
+	display: inline-block;
+	text-decoration: none;
+	position: relative;
+	margin-bottom: 1.5rem;
+	opacity: 0.85;
+
+	.servlist__pic {
+		display: inline-block;
+		border: solid 3px $c-white;
+		background: linear-gradient( 0deg, rgba(255,255,255,0.3) 0%, rgba(62,114,170,1) 100%);
+		margin-bottom: 0.3rem;
+		padding: 3rem;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+	}
+
+	.servlist__title {
+		padding: 0.8rem 0.5rem;
+		font: bold $font-size-base $font-family-base;
+		line-height: $line-height-def;
+		text-transform: uppercase;
+		text-align: center;
+		background-color: $c-white;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

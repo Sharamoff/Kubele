@@ -1,0 +1,81 @@
+///////////////////////////////////////////////
+
+
+
+// списки
+
+
+
+UL {
+	margin-bottom: 1.5rem;
+
+	> ul {
+		padding-left: 3.7rem;
+
+		> li {
+			margin: 0.7rem 0;
+		}
+
+	}
+
+	> LI {
+		margin: 1rem 0;
+	}
+
+}
+
+UL.ul--nolist {
+	padding-left: 0;
+	list-style: none;
+}
+
+
+UL.ul--links {
+	list-style: none;
+	padding-left: 0;
+
+
+	> li {
+		margin-left: 2rem;
+
+		&:before {
+			font-family: $fontawesome;
+			font-size: $font-size-fixsm;
+			color: $c-blue;
+			content: "\f061";
+			margin-right: 0.8rem;
+			position: relative;
+			top: -0.1rem;
+			margin-left: -1.9rem;
+		}
+	}
+
+}
+
+OL.ol--cont {
+	counter-reset: li;
+	list-style: none;
+
+	> li {
+		margin: 1.5rem 0 1.5rem -1.5rem;
+		position: relative;
+		display: block;
+		&:before {
+			content: counter(li);
+			counter-increment: li;
+			position: absolute;
+			left: -2.5rem;
+			top: -0.3rem;
+			background: #fff;
+			height: 2.1rem;
+			width: 2.1rem;
+			text-align: center;
+			font: $font-size-base $font-family-base;
+			line-height: 1.4;
+			color: $c-gray-light;
+			border: solid 1px $c-gray-light;
+			border-radius: 50%;
+		}
+	}
+
+}

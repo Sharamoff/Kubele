@@ -1,0 +1,75 @@
+///////////////////////////////////////////////
+
+
+
+// личный кабинет
+
+.pagewrap.page--submenu {
+
+  .pagecontent {
+    bottom: 280px;
+  }
+
+}
+
+.submenuwrap {
+
+  .pagecontent {
+    position: relative;
+    height: 30rem;
+
+    @include media-breakpoint-down(md) {
+      height: auto;
+    }
+
+  }
+
+}
+
+.block-submenu {
+  background-color: rgba(255,255,255,0.85);
+  padding: 0.5rem 1rem 0.5rem 3rem;
+  height: 250px;
+  overflow-y: auto;
+  font-size: $font-size-basemin;
+  line-height: $line-height-min;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+
+
+  @include media-breakpoint-down(md) {
+    margin-top: -3rem;
+    margin-bottom: 3rem;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 1rem 1.5rem 1.5rem;
+    width: $m-min;
+    height: auto;
+    overflow: auto;
+  }
+
+  ul {
+    padding: 0;
+    margin: 1rem 0;
+    list-style: none;
+
+    > li {
+      text-align: left !important;
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+
+

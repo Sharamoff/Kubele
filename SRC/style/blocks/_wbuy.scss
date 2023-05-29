@@ -1,0 +1,60 @@
+///////////////////////////////////////////////
+
+
+
+// гдекупить
+
+
+.sc_wbuy-filter {
+	background-color: transparentize($c-blue-dark, 0.3);
+	padding: 1.5rem 3rem;
+	margin-bottom: 0;
+
+	@include media-breakpoint-only(xs) {
+		padding: 1.5rem;
+	}
+
+	label {
+		color: $c-white !important;
+	}
+
+	.btn {
+		background-color: transparentize($c-white, 0.25);
+		color: $color-link;
+		min-width: 20rem;
+		margin-top: 0.5rem !important;
+		padding: 1.2rem 3rem;
+
+		&:hover {
+			background-color: $color-link-hover;
+			color: $c-white;
+		}
+
+	}
+
+}
+
+
+
+.sc_wbuy-map {
+	margin-top: 0;
+	margin-bottom: 0;
+
+	.wbuy-ymap {
+		height: 50rem;
+		background-color: $c-white;
+	}
+
+
+
+}
+
+
+
+.sc_wbuy-result {
+	margin-top: -3rem;
+	background-color: $color-bk-page;
+}
+
+
+

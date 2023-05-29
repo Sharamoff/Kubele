@@ -1,0 +1,354 @@
+///////////////////////////////////////////////
+
+
+
+// мелочи
+
+
+
+P {
+	line-height: $line-height-p;
+}
+
+
+.novis {
+	display: none
+}
+
+.novisabs {
+	display: none !important;
+}
+
+
+
+//крошки
+.breadcrumb {
+	font: $font-size-basemin $font-family-base;
+	background: none;
+	text-transform: uppercase;
+	color: $c-white !important;
+	padding: 0;
+	width: 75%;
+
+	@include media-breakpoint-down(md) {
+		margin: 0;
+	}
+
+	@include media-breakpoint-only(xs) {
+		//margin: 4rem 0 1rem 0;
+		display: none;
+	}
+
+	.breadcrumb-item {
+		padding-left: 0;
+		margin:0 0.75rem 0 0;
+		line-height: $line-height-def;
+
+		&:before {
+			color: $c-white !important;
+			font-weight: normal !important;
+		}
+
+	}
+
+	.active {
+		font-weight: bold;
+		color: $c-white !important;
+	}
+
+	a {
+		color: $c-white;
+
+
+		&:hover {
+			color: $c-red;
+		}
+
+	}
+
+}
+
+
+
+//нумерация страниц
+
+nav[aria-label="pagination"] {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pagination {
+	font: $font-size-base $font-family-base;
+
+	.page-link {
+		padding: 0.6rem 1.2rem;
+		text-decoration: none;
+		border-color: $c-white;
+		background: transparentize($c-white, 0.5);
+
+		&:hover {
+			color: $color-link-hover;
+			background: transparentize($c-white, 0.25);
+		}
+
+		i {
+			font-size: $font-size-basemin;
+		}
+
+	}
+
+	.page-item.active {
+
+		.page-link {
+			background: $c-white;
+			color: $c-gray;
+			border-color: $c-white;
+		}
+
+	}
+
+	.page-item.disabled {
+
+		.page-link {
+			opacity: 0.3;
+		}
+
+	}
+
+}
+
+
+
+//карточка (бывшая .panel)
+.card {
+	border-color: $c-gray-lightermore;
+	border-radius: 0;
+	margin: 5rem 0;
+	background-color: transparent;
+
+	@include media-breakpoint-only(xs) {
+		margin: 3rem auto;
+	}
+
+	.card-header {
+		font: bold $font-size-basemax $font-family-base;
+		color: $c-black;
+		padding: 0.5rem 2.5rem 0.7rem 2.5rem;
+		line-height: $line-height-min;
+		background-color: $c-white;
+
+		@include media-breakpoint-only(xs) {
+			padding: 0.5rem 1.5rem 0.7rem 1.5rem;
+		}
+
+	}
+
+	.card-body {
+		background-color: $color-bk-page;
+		padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+
+		@include media-breakpoint-only(xs) {
+			padding: 1.5rem;
+		}
+
+	}
+
+	&--warn {
+		border: solid 1px $c-red;
+
+		.card-header {
+			color: $c-white;
+			border-color: $c-red;
+			background-color: $c-red;
+		}
+
+	}
+
+	&--info {
+		border: solid 1px $c-blue;
+
+		.card-header {
+			color: $c-white;
+			border-color: $c-blue;
+			background-color: $c-blue;
+		}
+
+	}
+
+}
+
+
+
+//индикатор продолжения
+.ind--more:before {
+	font-family: $fontawesome;
+	content: " \f105\f105\f105";
+	position: relative;
+	top: 0.1rem;
+	color: $color-link !important;
+}
+
+a:hover {
+	.ind--more:before {
+		color: $color-link-hover !important;
+	}
+}
+
+
+
+//
+.c--red {color: $c-red}
+.c--blue {color: $c-blue}
+
+
+
+.promoting {
+	margin-top: 3rem;
+}
+
+
+.img-inner {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	width: 50%;
+	max-width: 290px;
+
+	@include media-breakpoint-only(xs) {
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+
+	&.float-left {
+		margin-right: 1.5rem;
+
+		@include media-breakpoint-only(xs) {
+			margin-right: 0;
+			float: none !important;
+		}
+
+	}
+
+	&.float-right {
+		margin-left: 1.5rem;
+
+		@include media-breakpoint-only(xs) {
+			margin-left: 0;
+			float: none !important;
+		}
+
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		max-width: 290px;
+		margin-bottom: 0.5rem;
+	}
+
+	p {
+		font: $font-size-basemin $font-family-base;
+		line-height: $line-height-def;
+		margin-top: 0.3rem;
+		margin-bottom: 0.3rem;
+		color: $c-black;
+	}
+
+}
+
+
+
+.to--date {
+	color: $c-blue-dark;
+	white-space: nowrap;
+}
+
+
+
+.i--down {
+	display: inline-block;
+	color: $c-white;
+	margin-right: 0.8rem;
+
+	&:before {
+		font-family: $fontawesome;
+		font-weight: normal;
+		content: "\f103";
+	}
+
+}
+
+.i--up {
+	display: inline-block;
+	color: $c-white;
+	margin-right: 0.8rem;
+
+	&:before {
+		font-family: $fontawesome;
+		font-weight: normal;
+		content: "\f102";
+	}
+
+}
+
+
+
+
+.slick-center img {
+	border: solid 2px $c-white;
+}
+
+
+// изменение цвета yandex map
+[class*="ymaps-2"][class*="-ground-pane"] {
+	filter: hue-rotate(120deg) grayscale(85%);
+}
+
+
+.fa-ruble-sign {
+	font-size: $font-size-basemin;
+	margin-left: 2px;
+}
+
+.rub {
+	white-space: nowrap;
+	color: $c-gray !important;
+
+	&:after {
+		font-family: $fontawesome;
+		font-size: smaller;
+		font-weight: normal !important;
+		content: '\f158';
+		margin-left: 0.3rem;
+	}
+
+}
+
+
+// цвета
+
+.c--chrom-matte 	{ background-color: #8D9093; }
+.c--chrom-brlnt 	{ background-color: #b3bac0; }
+.c--bronze-light 	{ background-color: #8a8266; }
+.c--black-matte 	{ background-color: #222222; }
+.c--white-matte 	{ background-color: #e5e5e5; }
+
+
+.label--new {
+	background-color: #c2e254;
+	color: $c-black;
+}
+
+.label--action {
+	background-color: #ffa861;
+	color: $c-black;
+}
+
+.label--sale {
+	background-color: #ffd861;
+	color: $c-black;
+}
+
+
+.tooltip {
+	line-height: 1.1 !important;
+}

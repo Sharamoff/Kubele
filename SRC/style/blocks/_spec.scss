@@ -1,0 +1,42 @@
+///////////////////////////////////////////////
+
+
+
+// специалисты
+
+.sc_spec {
+
+}
+
+
+
+
+.block-spec {
+
+	.spec__item {
+		background: $color-bk-page;
+		color: $color-text;
+		width: 100%;
+		text-align: center;
+		padding: 10px 5px;
+
+		.item_hdr {
+			font-weight: bold;
+			font-size: $font-size-basemax;
+		}
+
+		.item_pic {
+			width: 100%;
+			max-width: 140px;
+			height: auto;
+			margin: 0 0 15px 0;
+		}
+
+		.item_name {
+			font-style: italic;
+		}
+
+	}
+
+
+}

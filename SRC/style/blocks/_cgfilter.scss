@@ -1,0 +1,264 @@
+///////////////////////////////////////////////
+
+
+
+// фильтр каталога
+
+
+
+.block-cgfilter {
+	position: relative;
+	margin-bottom: 1.5rem;
+
+	&.disabled {
+
+		.cgfilter__body {
+			opacity: 0.33;
+
+			.cgfilter__body_disablepanel {
+				display: block;
+			}
+
+		}
+
+	}
+
+	.cgfilter__info {
+		position: absolute;
+		top: 0.2rem;
+		right: 0;
+		display: inline-block;
+		width:26px;
+		height: 26px;
+		border: solid 2px $c-blue;
+		border-radius: 50%;
+		background-color: $c-white;
+		text-align: center;
+		text-decoration: none;
+		line-height: 20px;
+		font-size: 18px;
+		font-weight: bold;
+		color: $c-blue;
+		opacity: 0.75;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 1;
+		}
+
+	}
+
+	.cgfilter__hdr {
+		display: inline-block;
+		width: 75%;
+		padding: 0.6rem 1rem 0.6rem 1.5rem;
+		background: $c-blue-dark;
+		font: bold $font-size-base $font-family-base;
+		color: $c-white;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		@include media-breakpoint-down(sm) {
+			width: 90%;
+		}
+
+	}
+
+	.cgfilter__body {
+		background-color: transparentize($c-blue-dark, 0.2);
+		padding: 2rem 1.5rem 0 1.5rem;
+		min-height: 27rem;
+		position: relative;
+
+		@include media-breakpoint-down(sm) {
+			min-height: initial;
+			padding-bottom: 1.5rem;
+		}
+
+		.cgfilter__body_disablepanel {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 2;
+			background: transparent;
+		}
+
+		.form-group {
+			margin-bottom: 1.5rem;
+		}
+
+		label {
+			font-size: $font-size-basemin;
+			color: $c-white;
+			text-transform: uppercase;
+			line-height: $line-height-def !important;
+
+			&.label--named {
+				text-transform: none;
+				margin-bottom: 0.5rem;
+			}
+
+		}
+
+		.form-select-label {
+			font-size: $font-size-basemin;
+			color: $c-white;
+			text-transform: none;
+			margin-bottom: 0.5rem;
+		}
+
+	}
+
+	.cgfilter_inputslider {
+		margin-bottom: 2.5rem;
+
+		.inputslider__val	{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.inputslider__hdr {
+			font-size: $font-size-basemin;
+			margin-top: 0.3rem;
+			margin-bottom: 0.3rem;
+			margin-right: 0.5rem;
+		}
+
+		.inputslider__slider {
+			margin-top: 1.5rem;
+		}
+
+		.inputslider__inputval {
+			margin-top: 0;
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			justify-content: flex-end;
+			font-size: $font-size-basemin;
+
+			input {
+				width: 35%;
+				font-size: $font-size-basemin !important;
+				text-align: center;
+				color: $c-black !important;
+				padding: 0 3px !important;
+				height: 2.5rem !important;
+				line-height: 2.5rem !important;
+				max-width: 8rem;
+			}
+
+		}
+
+		.inputslider__popval {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+
+			> div {
+				font-size: 12px;
+				color: $c-gray;
+				background: transparentize($c-white, 0.33);
+				padding: 6px 6px;
+				margin: 3px 6px 3px 0;
+				border-radius: 6px;
+				cursor: pointer;
+
+				&:hover {
+					background: $c-white;
+				}
+
+			}
+
+		}
+
+	}
+
+	.multiselect-native-select {
+
+		.multiselect_btn-group {
+			position: relative;
+			display: inline-flex;
+			vertical-align: middle;
+			width: 100%;
+		}
+
+		.multiselect_btn {
+			background: $c-white !important;
+			width: 100%;
+			height: auto;
+			overflow: hidden;
+			color: $color-text;
+			text-transform: uppercase;
+			font-weight: normal;
+			font-size: $font-size-basemin;
+			padding: 0.5rem 1rem;
+			border-radius: 2px;
+			border: none;
+			box-shadow: none;
+			text-align: left;
+		}
+
+		.multiselect-container {
+			background: transparentize($c-white, 0.1);
+			font-size: $font-size-basemin;
+			padding: 0.5rem 1.5rem 1rem 1.5rem;
+			width: 100%;
+
+			li {
+				margin: 0.5rem 0;
+			}
+
+			label {
+				color: $color-text;
+				text-transform: uppercase;
+				padding: 0;
+			}
+
+			input {
+				margin: 0 0.8rem 0 0;
+				height: 1.8rem !important;
+				width: 1.8rem !important;
+				position: relative;
+				top: 5px;
+			}
+
+		}
+
+	}
+
+}
+
+
+
+// модальное окно Информации
+
+.cgfilter__modal {
+
+
+	.cgfilter__info_item {
+		display: flex;
+		flex-wrap: nowrap;
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+
+		img {
+			border: solid 1px $c-white;
+			margin-right: 1.5rem;
+			width: 6rem;
+			height: 6rem;
+		}
+
+		> p {
+			align-self: center;
+		}
+
+	}
+
+}
+
+

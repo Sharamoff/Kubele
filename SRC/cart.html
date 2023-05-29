@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<title>Kubele</title>
+
+	<link href="css/vendor.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/addit.css" rel="stylesheet">
+	<link rel="stylesheet" href="style/elements/_tables.scss">
+
+</head>
+
+<body>
+
+
+
+
+
+
+<div class="pagewrap">
+
+
+
+	//= layout/_header.html
+
+
+
+
+
+	<div class="pagecontent">
+	<div class="container">
+
+
+
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">Главная</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Корзина</li>
+			</ol>
+		</nav>
+
+
+
+		<h1>Ваша Корзина</h1>
+
+		<button class="b-hdrmin"><i class="fal fa-trash-alt"></i>&nbsp;Очистить корзину</button>
+
+
+
+		<section class="sc_cart">
+			<form>
+			<div class="row">
+
+
+				<div class="col-md-8">
+
+					<div class="block-cart">
+
+						<div class="cartitem">
+							<div class="row">
+								<div class="col-md-7">
+									<div class="cartitem__label label--action">Акция</div>
+									<div class="cartitem__img"><img src="img/catalog/_i-item1.jpg" alt=""></div>
+									<div class="cartitem__title">Душевое ограждение <strong>TREND DOOR GK-861NAITL</strong></div>
+									<div class="cartitem__note">
+										<p>200см, стекло 6мм или 8мм, профиль хром матовый, цвект стекла полистирол lines.</p>
+										<p>Товар в наличии. Поставка от 4 до 6 дней.</p>
+										<p>Предоплата 100%</p>
+									</div>
+									<div class="cartitem__types">
+										Установка:
+										<select>
+											<option value="левая" selected>левая</option>
+											<option value="правая">правая</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="cartitem__quant">
+										<div class="inputnumber">
+											<button class="inputnumber__minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"></button>
+											<input type="number" id="id_cartitem__quant" class="form-control" value="1" min="1">
+											<button class="inputnumber__plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"></button>
+										</div>
+										<div class="cartitem__quant_per">150 000&nbsp;<i class="fal fa-ruble-sign"></i>/ед.</div>
+									</div>
+									<div class="cartitem__price">
+										<div class="cartitem__price_price rub">300 000</div>
+										<div class="cartitem__price_oldprice rub">315 950</div>
+										<div class="cartitem__price_diffprice rub">-15 950</div>
+									</div>
+									<div class="clearfix"></div>
+									<button class="cartitem__del"><i class="fal fa-trash-alt"></i><span>Удалить</span></button>
+								</div>
+							</div>
+						</div>
+
+						<div class="dlv"></div>
+
+						<div class="cartitem">
+							<div class="row">
+								<div class="col-md-7">
+									<div class="cartitem__img"><img src="img/catalog/_i-item3.jpg" alt=""></div>
+									<div class="cartitem__title">Душевое ограждение <strong>GUWER GK-664RB</strong></div>
+									<div class="cartitem__note">200см, cтекло закаленное стенка 8мм, дверка 6мм, профиль хром, ручки СН02 или СН04.</div>
+								</div>
+								<div class="col-md-5">
+									<div class="inputnumber cartitem__quant">
+										<button class="inputnumber__minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"></button>
+										<input type="number" id="id_cartitem__quant2" class="form-control" value="1" min="1">
+										<button class="inputnumber__plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"></button>
+									</div>
+									<div class="cartitem__price rub">12 800</div>
+									<div class="clearfix"></div>
+									<button class="cartitem__del"><i class="fal fa-trash-alt"></i><span>Удалить</span></button>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="block-cartbtns">
+						<div class="row">
+							<div class="col-sm-6 d-sm-flex justify-content-start">
+								<button class="btn b--grdw"><i class="fal fa-long-arrow-left"></i>Продолжить покупки</button>
+							</div>
+							<div class="col-sm-6 d-sm-flex justify-content-end">
+								<button class="btn b--grdw">Перейти к оформлению<i class="fal fa-long-arrow-right"></i></button>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+				<div class="col-md-4">
+
+					<div class="block-cartdelivery">
+						<i class="fas fa-truck"></i>
+						<div>Доставка вашего заказа будет <strong>Бесплатной</strong>.</div>
+					</div>
+
+					<div class="block-cartsub">
+						<div class="row">
+							<div class="cartsub__prop">Товары&nbsp;<span>(2)</span></div>
+							<div class="cartsub__val rub"><strong>312 800</strong></div>
+						</div>
+						<div class="row">
+							<div class="cartsub__prop">Скидка по акции&nbsp;<span>(15%)</span></div>
+							<div class="cartsub__val rub">- 64 200</div>
+						</div>
+						<div class="dlv"></div>
+						<div class="row">
+							<div class="cartsub__prop sum">Всего стоимость</div>
+							<div class="cartsub__val sum rub">298 600</div>
+						</div>
+						<button class="btn b--btn">Перейти к оформлению</button>
+						<button class="btn b--grd">Купить в 1 клик</button>
+					</div>
+
+				</div>
+
+
+			</div>
+			</form>
+		</section>
+
+
+
+	</div>
+	</div>
+
+
+
+</div>
+
+
+
+
+
+//= layout/_footer.html
+
+
+
+
+//= layout/_modal.html
+
+
+
+
+
+<script src="js/vendor.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
