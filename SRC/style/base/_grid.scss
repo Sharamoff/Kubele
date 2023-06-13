@@ -22,7 +22,7 @@ BODY {
 	font-family: $font-family-base;
 	font-size: $font-size-base;
 	background-size: contain;
-	background: url("../img/cl-pg1.jpg") no-repeat fixed top;
+	background: $color-bk-body url("../img/cl-pg1.jpg") no-repeat fixed top;
 	color: $c-white;
 	min-height: 100%;
 	height: auto !important;
@@ -229,6 +229,22 @@ section {
 
 }
 
+
+.overlay {
+	display: none;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: transparentize($c-black, 0.9);
+	z-index: 998;
+	opacity: 0;
+
+	&.active {
+		display: block;
+		opacity: 1;
+	}
+
+}
 
 
 

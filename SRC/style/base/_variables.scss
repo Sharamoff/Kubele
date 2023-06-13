@@ -1,11 +1,11 @@
 // media
 
-$m-min:									290px;
-$m-max:									1140px;
+$m-min:					        290px;
+$m-max:					        1140px;
 
-$content-max:						1140px;
+$content-max:			      1140px;
 
-$blockpic-max:					290px;
+$blockpic-max:			    290px;
 
 
 
@@ -14,37 +14,37 @@ $blockpic-max:					290px;
 $c-white:               rgb(255, 255, 255);
 $c-black:               rgb(0, 0, 0);
 
-$c-gray-lightermore:		#cccccc;
-$c-gray-lighter:				#999999;
-$c-gray-light:					#666666;
-$c-gray:								#333333;
-$c-blue-light:					#8baacc;
-$c-blue: 								#3e72aa;
-$c-blue-dark:						#31649b;
-$c-red: 								#96004b;
+$c-gray-lightermore:	  #cccccc;
+$c-gray-lighter:		    #999999;
+$c-gray-light:			    #666666;
+$c-gray:				        #333333;
+$c-blue-light:			    #8baacc;
+$c-blue: 				        #3e72aa;
+$c-blue-dark:			      #31649b;
+$c-red: 				        #96004b;
 
 $color-bk-body:         #4d7fb5;
 $color-bk-header:       $c-gray;
 $color-bk-footer:       $c-gray-lighter;
-$color-bk-page: 				rgba(255,255,255,0.75);
+$color-bk-page: 		    rgba(255,255,255,0.75);
 
 $color-text:            $c-gray;
-$color-fields:					$c-gray;
+$color-fields:			    $c-gray;
 $color-link:            $c-blue;
 $color-link-hover:      $c-red;
-$color-h:      			  	$c-gray;
-$color-hdr:      			  $c-gray;
-$color-note:						$c-gray-light;
+$color-h:      			    $c-gray;
+$color-hdr:      		    $c-gray;
+$color-note:			      $c-gray-light;
 $color-placeholder:     $c-gray-lighter;
-$color-border:					$c-gray-lighter;
-$color-border-hover:		$c-gray-lightermore;
-$color-border-pic:			$c-white;
+$color-border:			    $c-gray-lighter;
+$color-border-hover:	  $c-gray-lightermore;
+$color-border-pic:		   $c-white;
 
 
 
 // fonts
 
-$fontawesome:						'Font Awesome 5 Pro';
+$fontawesome:			      'Font Awesome 5 Pro';
 $font-family-base:      OpenSans, Arial, Helvetica, sans-serif;
 $font-family-light:     'OpenSans Light', Arial, Helvetica, sans-serif;
 
@@ -57,19 +57,19 @@ $f-size-base-xs:        10px;
 $font-size-base:        1.4rem;
 $font-size-basemin:     1.2rem;
 $font-size-basemax:     1.6rem;
-$font-size-text:				$font-size-base;
-$font-size-note:				$font-size-basemin;
+$font-size-text:		    $font-size-base;
+$font-size-note:		    $font-size-basemin;
 $font-size-h1:          2.5rem;
 $font-size-h2:          2.1rem;
 $font-size-h3:          1.8rem;
 $font-size-hdr:         1.6rem;
-$font-size-fixsm:				12px;
+$font-size-fixsm:		    12px;
 
 $line-height-p:   	    1.428571429;
 $line-height-def:       1.2;
 $line-height-min:       1.1;
-$line-height-hdr:				1.12;
+$line-height-hdr:		    1.12;
 
 
 
-$border-radius:					4px;
+$border-radius:			    4px;

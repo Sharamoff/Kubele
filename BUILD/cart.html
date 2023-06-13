@@ -17,6 +17,7 @@
 	<link href="css/main.css" rel="stylesheet">
 	<link href="css/addit.css" rel="stylesheet">
 	<link rel="stylesheet" href="style/elements/_tables.scss">
+	<link rel="stylesheet" href="../../../AlatiNew/_PROJECT/SRC/style/blocks/_cart.scss">
 
 </head>
 
@@ -33,17 +34,17 @@
 
 	<header class="header">
 	
-	
+	<!--
 	<div class="bar-top">
 		<div class="container-fluid">
 			Уважаемые клиенты, магазин продолжает работу в дистанционном режиме. Все заказы мы доставим до вашего дома. Берегите себя.
 		</div>
 	</div>
-	
+	-->
 	
 	<div class="container">
 	
-		<a href="tel:88004442726" class="header-phone" title="Позвоните нам"><span>8 800</span>&nbsp;<strong>444-27-26</strong></a>
+		<a href="tel:84956462226" class="header-phone" title="Позвоните нам"><span>8 495</span>&nbsp;<strong>646-22-26</strong></a>
 	
 		<div class="header-logo">
 			<a href="https://www.kubele.com/"><img src="img/logo.svg" alt="Kubele"></a>
@@ -66,102 +67,99 @@
 				<nav class="navbar navbar-custom navbar-expand-lg">
 				
 				
+				
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#id_main-nav" aria-controls="id_main-nav" aria-expanded="false" aria-label="Меню">
 						<div class="navbar-toggler__icon"></div>
 					</button>
 				
 				
+				
 					<button class="nav-btn_search" data-toggle="collapse" data-target="#id_md_search" aria-expanded="false" aria-controls="id_md_search" title="Поиск по сайту"><i class="far fa-search"></i></button>
 				
 				
-					<a href="#" class="nav-btn_cart" title="Ваша корзина"><i class="far fa-shopping-cart"></i></a>
+				
+					<a href="/catalogue/cart/" class="nav-btn_cart" title="Ваша корзина"><i class="far fa-shopping-cart"></i></a>
+				
 				
 				
 					<div class="collapse nav-md_search" id="id_md_search">
-						<form>
-							<input class="form-control" type="search" placeholder="Поиск по сайту">
+						<form name="fm-search2" id="fm-search2" action="/search/" method="post">
+							<input type="search" name="search" id="fm-search2__search" class="form-control" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
 						</form>
 					</div>
 				
 				
+				
 					<div class="collapse navbar-collapse" id="id_main-nav">
+				
 				
 						<div class="navbar-dlv"></div>
 				
-						<a href="tel:88004442726" class="navbar-phone" title="Позвоните нам">8&nbsp;800&nbsp;<strong>444-27-26</strong></a>
 				
-						<a href="#" class="navbar-cart" title="Товаров в корзине">
+						<a href="/catalogue/cart/" class="navbar-cart" title="Товаров в корзине">
 							<i class="far fa-shopping-cart"></i>
-							<span>Товаров в корзине:&nbsp;</span><strong>96</strong>
+							<span>Товаров в корзине:&nbsp;</span><strong rel="cart_num">0</strong>
 						</a>
 				
+				
 						<ul class="navbar-nav mr-auto">
+				
+							<li class="nav-item">
+								<button class="nav-link catalog-dropdownbtn"><i></i>Каталог</button>
+							</li>
+				
 							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle link-hovered" href="#" id="id_main-nav1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Каталог</a>
-								<div class="dropdown-menu" aria-labelledby="id_main-nav1">
-									<a class="dropdown-item" href="#">Душевые ограждения четверть круга</a>
-									<a class="dropdown-item" href="#">Душевые ограждения квадратные</a>
-									<a class="dropdown-item" href="#">Душевые ограждения прямоугольные</a>
-									<a class="dropdown-item" href="#">Душевые ограждения п-образные</a>
-									<a class="dropdown-item" href="#">Двери в душевые ниши</a>
-									<a class="dropdown-item" href="#">Шторки в ванну прямоугольные</a>
-									<a class="dropdown-item" href="#">Шторки в ванну асимметричные</a>
-									<a class="dropdown-item" href="#">Шторки в ванну симметричные</a>
-									<a class="dropdown-item" href="#">Поддоны для душа четверть круга</a>
-									<a class="dropdown-item" href="#">Поддоны для душа квадратные</a>
-									<a class="dropdown-item" href="#">Поддоны для душа пятиугольные</a>
-									<a class="dropdown-item" href="#">Поддоны для душа прямоугольные</a>
+								<a href="#" id="id_main-nav10" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">О компании</a>
+								<div class="dropdown-menu" aria-labelledby="id_main-nav10">
+									<a href="/about/" class="dropdown-item">О нас</a>
+									<a href="/about/news/" class="dropdown-item">Новости</a>
+									<a href="/about/exhibitions/" class="dropdown-item">Выставки</a>
+									<a href="/about/press/" class="dropdown-item">Пресса</a>
+									<a href="/about/contacts/" class="dropdown-item">Контакты</a>
+									<a href="/portfolio/" class="dropdown-item">Портфолио</a>
 								</div>
 							</li>
+				
 							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle link-hovered" href="#" id="id_main-nav2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">О компании</a>
-								<div class="dropdown-menu" aria-labelledby="id_main-nav2">
-									<a class="dropdown-item" href="#">Контакты</a>
-									<a class="dropdown-item" href="#">Новости</a>
-									<a class="dropdown-item" href="#">Пресса</a>
-									<a class="dropdown-item" href="#">Выставки</a>
-								</div>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle link-hovered" href="#" id="id_main-nav3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Сервис</a>
+								<a href="#" id="id_main-nav3" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Сервис</a>
 								<div class="dropdown-menu" aria-labelledby="id_main-nav3">
-									<a class="dropdown-item" href="#">Скачать</a>
-									<a class="dropdown-item" href="#">Где купить</a>
-									<a class="dropdown-item" href="#">Гарантия</a>
-									<a class="dropdown-item" href="#">Заказать запчасти</a>
-									<a class="dropdown-item" href="#">Сертификаты</a>
-									<a class="dropdown-item" href="#">FAQ</a>
+									<a href="/service/adjusters/" class="dropdown-item">Монтаж</a>
+									<a href="/service/guarantee/" class="dropdown-item">Гарантия</a>
+									<a href="/service/order-parts/" class="dropdown-item">Заказать запчасти</a>
+									<a href="/service/download/" class="dropdown-item">Скачать</a>
+									<a href="/service/video/" class="dropdown-item">Видео</a>
+									<a href="/service/certificates/" class="dropdown-item">Сертификаты</a>
+									<a href="/service/faq/" class="dropdown-item">Часто задаваемые вопросы</a>
+									<a href="/service/dilery/" class="dropdown-item">Где купить</a>
 								</div>
 							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link link-hovered" href="#" id="id_main-nav4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Доставка</a>
+				
+							<li class="nav-item">
+								<a href="/delivery/" id="id_main-nav37" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false">Доставка</a>
 							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link link-hovered" href="#" id="id_main-nav5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Оплата</a>
+				
+							<li class="nav-item">
+								<a href="/payment/" id="id_main-nav38" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false">Оплата</a>
 							</li>
+				
 							<li class="nav-item dropdown nav-item-md">
-								<span class="dropdown-toggle" id="id_main-nav6" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/b-lupa.svg" alt="Поиск по сайту"></span>
-								<div class="navbar-search-md dropdown-menu" aria-labelledby="id_main-nav6">
-									<form class="fm-search-md">
-										<input class="form-control" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+								<span id="id_main-nav5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/b-lupa.svg" alt="Поиск по сайту"></span>
+								<div class="navbar-search-md dropdown-menu float-right" aria-labelledby="id_main-nav4">
+									<form name="fm-search" id="fm-search" action="/search/" method="post" class="fm-search-md">
+										<input type="search" name="search" id="fm-search__search" class="form-control" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
 									</form>
 								</div>
 							</li>
+				
 						</ul>
 				
-						<!--
-						<div class="navbar-search">
-							<form class="fm-search">
-								<input class="form-control" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-							</form>
-						</div>
-						-->
 				
-						<a href="#" class="navbar-cab">Личный кабинет</a>
+				
+						<a href="/personal/order/" class="navbar-cab">Личный кабинет</a>
+				
+				
 				
 					</div>
-				
-				
 				</nav>
 			</div>
 		</div>
@@ -173,6 +171,235 @@
 	</header>
 
 
+
+	<div class="catalog-menu">
+		<div class="container">
+	
+	
+	
+			<div class="catalog-plate" role="tabpanel">
+	
+				<button class="b-catalog-close"></button>
+	
+				<div class="catalog-plate-l">
+					<div class="list-group">
+						<a href="#id_catalog-menu__pane1" data-toggle="list" id="id_id_catalog-menu__btn1" class="catalog-menu__btn active" role="tab">Душевые уголки</a>
+						<a href="#id_catalog-menu__pane2" data-toggle="list" id="id_id_catalog-menu__btn2" class="catalog-menu__btn" role="tab">Душевые двери</a>
+						<a href="#id_catalog-menu__pane3" data-toggle="list" id="id_id_catalog-menu__btn3" class="catalog-menu__btn" role="tab">Шторки на ванну</a>
+						<a href="#id_catalog-menu__pane4" data-toggle="list" id="id_id_catalog-menu__btn4" class="catalog-menu__btn" role="tab">Душевые перегородки</a>
+					</div>
+				</div>
+	
+				<div class="catalog-plate-r">
+					<div class="tab-content">
+						<div class="tab-pane catalog-menu__pane fade show active" id="id_catalog-menu__pane1" role="tabpanel" aria-labelledby="id_id_catalog-menu__btn1">
+							<div class="row">
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Форма</h3>
+										<ul>
+											<li><a href="">Полукруглые</a></li>
+											<li><a href="">Квадратные</a></li>
+											<li><a href="">Прямоугольные</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Цвет фурнитуры</h3>
+										<ul>
+											<li><a href="">Хром матовый</a></li>
+											<li><a href="">Хром блестящий</a></li>
+											<li><a href="">Бронзовый</a></li>
+											<li><a href="">Черный матовый</a></li>
+											<li><a href="">Белый матовый</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Цвет стекла</h3>
+										<ul>
+											<li><a href="">Бесцветный</a></li>
+											<li><a href="">Матовый</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Популярные размеры</h3>
+										<ul>
+											<li><a href="">70x70</a></li>
+											<li><a href="">70x90</a></li>
+											<li><a href="">70x100</a></li>
+											<li><a href="">80x80</a></li>
+											<li><a href="">80x90</a></li>
+											<li><a href="">80x100</a></li>
+											<li><a href="">80x110</a></li>
+											<li><a href="">80x120</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane catalog-menu__pane fade" id="id_catalog-menu__pane2" role="tabpanel" aria-labelledby="id_id_catalog-menu__btn2">
+							<div class="row">
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Форма</h3>
+										<ul>
+											<li><a href="">Раздвижные</a></li>
+											<li><a href="">Распашные</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Цвет фурнитуры</h3>
+										<ul>
+											<li><a href="">Хром матовый</a></li>
+											<li><a href="">Хром блестящий</a></li>
+											<li><a href="">Бронзовый</a></li>
+											<li><a href="">Черный матовый</a></li>
+											<li><a href="">Белый матовый</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Цвет стекла</h3>
+										<ul>
+											<li><a href="">Бесцветный</a></li>
+											<li><a href="">Матовый</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Популярные размеры</h3>
+										<ul>
+											<li><a href="">70x70</a></li>
+											<li><a href="">70x90</a></li>
+											<li><a href="">70x100</a></li>
+											<li><a href="">80x80</a></li>
+											<li><a href="">80x90</a></li>
+											<li><a href="">80x100</a></li>
+											<li><a href="">80x110</a></li>
+											<li><a href="">80x120</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane catalog-menu__pane fade" id="id_catalog-menu__pane3" role="tabpanel" aria-labelledby="id_id_catalog-menu__btn3">
+							<div class="row">
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Форма</h3>
+										<ul>
+											<li><a href="">Прямоугольные</a></li>
+											<li><a href="">Симметричные</a></li>
+											<li><a href="">Асимметричные</a></li>
+											<li><a href="">В нишу</a></li>
+											<li><a href="">Частичные</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Цвет фурнитуры</h3>
+										<ul>
+											<li><a href="">Хром матовый</a></li>
+											<li><a href="">Хром блестящий</a></li>
+											<li><a href="">Бронзовый</a></li>
+											<li><a href="">Черный матовый</a></li>
+											<li><a href="">Белый матовый</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Цвет стекла</h3>
+										<ul>
+											<li><a href="">Бесцветный</a></li>
+											<li><a href="">Матовый</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Популярные размеры</h3>
+										<ul>
+											<li><a href="">70x70</a></li>
+											<li><a href="">70x90</a></li>
+											<li><a href="">70x100</a></li>
+											<li><a href="">80x80</a></li>
+											<li><a href="">80x90</a></li>
+											<li><a href="">80x100</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane catalog-menu__pane fade" id="id_catalog-menu__pane4" role="tabpanel" aria-labelledby="id_id_catalog-menu__btn4">
+							<div class="row">
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Форма</h3>
+										<ul>
+											<li><a href="">Один сегмент</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Цвет фурнитуры</h3>
+										<ul>
+											<li><a href="">Хром матовый</a></li>
+											<li><a href="">Хром блестящий</a></li>
+											<li><a href="">Бронзовый</a></li>
+											<li><a href="">Черный матовый</a></li>
+											<li><a href="">Белый матовый</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Цвет стекла</h3>
+										<ul>
+											<li><a href="">Бесцветный</a></li>
+											<li><a href="">Матовый</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3">
+									<div class="catalog-menu-block">
+										<h3>Популярные размеры</h3>
+										<ul>
+											<li><a href="">70x70</a></li>
+											<li><a href="">70x90</a></li>
+											<li><a href="">70x100</a></li>
+											<li><a href="">80x80</a></li>
+											<li><a href="">80x90</a></li>
+											<li><a href="">80x100</a></li>
+											<li><a href="">80x110</a></li>
+											<li><a href="">80x120</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+			</div>
+	
+	
+		</div>
+	</div>
+	
+	
+	<div class="overlay"></div>
 
 
 
@@ -267,6 +494,30 @@
 						</div>
 
 					</div>
+
+
+					<h2 class="h2--panel">Дополнительные услуги</h2>
+					<div class="block-cartservice">
+
+						<div class="cartservice">
+							<div class="row">
+								<div class="col-md-7">
+									<div class="cartservice__icon"><img src="img/ti-dlvr2.svg" alt=""></div>
+									<div class="cartservice__title">Монтаж</div>
+									<div class="cartservice__note">Наш партнёр осуществит сборку, монтаж и подключение товаров</div>
+								</div>
+								<div class="col-md-5">
+									<div class="cartservice__quant">
+										<div class="input-switch" title="Выбрать/отменить дополнительную услугу">
+											<input type="checkbox" role="switch" id="id_cartservice-switch" checked><label for="id_cartservice-switch"></label>
+										</div>
+									</div>
+									<div class="cartservice__price rub">7 500</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 
 					<div class="block-cartbtns">
 						<div class="row">

@@ -5578,8 +5578,7 @@ a.close.disabled {
   float: left;
   width: 100%;
   margin-right: -100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -15368,7 +15367,6 @@ readers do not read off random characters that represent icons */
   }
 }
 .animated.flip {
-  -webkit-backface-visibility: visible;
   backface-visibility: visible;
   animation-name: flip;
 }
@@ -15394,7 +15392,6 @@ readers do not read off random characters that represent icons */
   }
 }
 .flipInX {
-  -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   animation-name: flipInX;
 }
@@ -15420,7 +15417,6 @@ readers do not read off random characters that represent icons */
   }
 }
 .flipInY {
-  -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   animation-name: flipInY;
 }
@@ -15439,7 +15435,6 @@ readers do not read off random characters that represent icons */
 }
 .flipOutX {
   animation-name: flipOutX;
-  -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
 }
 @keyframes flipOutY {
@@ -15456,7 +15451,6 @@ readers do not read off random characters that represent icons */
   }
 }
 .flipOutY {
-  -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   animation-name: flipOutY;
 }

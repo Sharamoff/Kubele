@@ -18,17 +18,34 @@ $('id_bkcollage').carousel({
 // фиксируем header
 
 function FixHeader() {
-	var
-		top_pos = 1;
-
-	if($(this).scrollTop() > top_pos) {
+	if($(this).scrollTop() > 1) {
 		$('.header').addClass('fixed');
+		$('.catalog-menu').css('top', '3.9rem');
 	} else {
 		$('.header').removeClass('fixed')
+		$('.catalog-menu').css('top', '9.2rem');
 	}
 }
 
 $(window).scroll(function () {	FixHeader(); });
+
+
+
+//главное меню
+$('.catalog-dropdownbtn').on('click', function () {
+	$(this).toggleClass('active');
+	$('.catalog-menu').toggleClass('active');
+	$('.overlay').toggleClass('active');
+	if ($(document).width() < 986) {
+		$('body').toggleClass('modal-open');
+	}
+});
+$('.overlay, .b-catalog-close, .catalog-dropdownbtn.active').on('click', function () {
+	$('.catalog-dropdownbtn').removeClass('active');
+	$('.catalog-menu').removeClass('active');
+	$('.overlay').removeClass('active');
+	$('body').removeClass('modal-open');
+});
 
 
 
