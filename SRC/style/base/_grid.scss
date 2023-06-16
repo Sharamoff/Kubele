@@ -34,10 +34,24 @@ BODY {
 	}
 
 	&.modal-open {
-		padding: 0 !important;
+
+	}
+
+	&.modal-open {
 		overflow: hidden;
-		position:fixed;
+		position: fixed;
 		width: 100%;
+
+		.header {
+			padding-right: 17px;
+			transition: none;
+
+			@include media-breakpoint-down(md) {
+				padding-right: 0;
+			}
+
+		}
+
 	}
 
 }

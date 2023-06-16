@@ -326,9 +326,17 @@ a:hover {
 
 // цвета
 
-.c--chrom-matte 	{ background-color: #8D9093; }
-.c--chrom-brlnt 	{ background-color: #b3bac0; }
-.c--bronze-light 	{ background-color: #8a8266; }
+.c-color {
+	width: 2rem;
+	height: 2rem;
+	border: solid 1px $c-white;
+	margin-right: 0.8rem;
+}
+
+.c--colorless 		{ background: #ffffff url("../img/colorless.png") top left; }
+.c--chrom-matte 	{ background-color: #c0c0c0; }
+.c--chrom-brlnt 	{ background-color: #dbe4eb; }
+.c--bronze-light 	{ background-color: #cd7f32; }
 .c--black-matte 	{ background-color: #222222; }
 .c--white-matte 	{ background-color: #e5e5e5; }
 

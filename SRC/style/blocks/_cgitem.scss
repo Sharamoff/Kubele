@@ -917,6 +917,12 @@
 		.cgitemlist__note  {
 			font-size: $font-size-note;
 			margin-bottom: 1rem;
+
+			span {
+				display: inline-block;
+				width: 7.5rem;
+			}
+
 		}
 
 		.cgitemlist__colors-min {

@@ -66,8 +66,8 @@
 
 	.cgfilter__body {
 		background-color: transparentize($c-blue-dark, 0.2);
-		padding: 2rem 1.5rem 0 1.5rem;
-		min-height: 27rem;
+		padding: 2rem 1.5rem 0.5rem 1.5rem;
+		min-height: 30rem;
 		position: relative;
 
 		@include media-breakpoint-down(sm) {
@@ -238,6 +238,82 @@
 
 .cgfilter__modal {
 
+	.modal-content {
+		min-width: 300px;
+		margin: 30% auto;
+
+		@include media-breakpoint-down(md) {
+			margin: auto;
+		}
+
+	}
+
+	.modal-header {
+		padding: 1rem 30px;
+
+		@include media-breakpoint-down(md) {
+			padding: 1rem 15px;
+		}
+
+	}
+
+	.mainhdr {
+		color: $c-black !important;
+		font-size: $font-size-basemax !important;
+	}
+
+	.cgfilter__modal-note {
+		font-size: $font-size-basemin;
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.cgfilter__modal-info {
+		display: flex;
+		justify-content: space-between;
+
+		ul {
+			padding: 0;
+			margin-left: auto;
+			margin-right: auto;
+
+			> li {
+				list-style: none;
+
+				> a {
+					display: flex;
+					align-items: center;
+					text-decoration: none;
+					text-transform: uppercase;
+					font-size: $font-size-basemin;
+				}
+
+				img {
+					height: 4rem;
+					width: auto;
+					margin-right: 1rem;
+				}
+
+			}
+
+		}
+
+		.hdr {
+			font-weight: bold;
+		}
+
+		.block-tagscloud {
+			margin-bottom: 1rem;
+
+			> li a {
+				display: block;
+				background-color: transparentize($c-blue-light, 0.75);
+				text-align: center;
+			}
+
+		}
+
+	}
 
 	.cgfilter__info_item {
 		display: flex;
