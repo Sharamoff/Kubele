@@ -67,7 +67,7 @@
 	.cgfilter__body {
 		background-color: transparentize($c-blue-dark, 0.2);
 		padding: 2rem 1.5rem 0.5rem 1.5rem;
-		min-height: 30rem;
+		min-height: 33rem;
 		position: relative;
 
 		@include media-breakpoint-down(sm) {
