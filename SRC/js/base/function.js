@@ -1,5 +1,6 @@
 //tooltips
 $('[data-toggle="tooltip"]').tooltip();
+$('.toast').toast();
 
 
 // гибкая фотогалерея

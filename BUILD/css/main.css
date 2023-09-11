@@ -125,7 +125,7 @@ BODY.modal-open .header {
 
 .pagewrap.page--idx .pagecontent {
   position: absolute;
-  bottom: 25rem;
+  bottom: 32rem;
   left: 0;
   width: 100%;
   padding-top: 0 !important;
@@ -899,7 +899,7 @@ section::after {
   font-size: 12px;
   color: #cccccc;
   padding-top: 0.5rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 4.5rem;
 }
 @media (max-width: 991.98px) {
   .footer {
@@ -1367,6 +1367,285 @@ section::after {
 }
 #modal_delivery .install-plane .install-plane__plane ul {
   margin-bottom: 3rem;
+}
+
+.modal-dialog .modal-content {
+  padding: 0 !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+.modal-dialog .modal-header {
+  position: relative;
+  padding: 0.5rem 3rem;
+  margin: 0;
+  color: #333333;
+  border-color: transparent;
+  background: #cccccc;
+}
+@media (max-width: 575.98px) {
+  .modal-dialog .modal-header {
+    padding: 1.5rem;
+  }
+}
+.modal-dialog .modal-header .mainhdr {
+  font-size: 2.1rem;
+  color: #cccccc;
+  text-shadow: none;
+  margin: 0;
+}
+.modal-dialog .modal-header button.close {
+  position: absolute;
+  top: -0.9rem;
+  right: 0.5rem;
+  color: black;
+  font-size: 5rem;
+  font-weight: lighter;
+}
+.modal-dialog .modal-body {
+  padding: 1.5rem 3rem;
+  overflow-y: auto;
+  color: #333333;
+}
+.modal-dialog .modal-body::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media (max-width: 575.98px) {
+  .modal-dialog .modal-body {
+    padding: 0.5rem 1.5rem;
+    max-height: initial;
+  }
+}
+
+#modal_region {
+  padding: 0 !important;
+}
+#modal_region .modal-dialog {
+  min-width: 99%;
+  margin: 1rem auto;
+}
+@media (max-width: 575.98px) {
+  #modal_region .modal-dialog {
+    min-width: 100%;
+    margin: 0;
+  }
+}
+#modal_region .hdr-region {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333333;
+  margin-top: 0.3rem;
+}
+#modal_region .hdr-region:before {
+  font-family: "Font Awesome 5 Pro";
+  color: #999999;
+  margin-right: 5px;
+  content: "";
+}
+#modal_region .fm-search {
+  float: right;
+  margin-right: 3rem;
+}
+#modal_region .fm-search i {
+  color: #666666;
+}
+#modal_region .fm-search input[type=search] {
+  font-size: 1.2rem !important;
+  padding: 0 1rem !important;
+  height: 2.5rem !important;
+  border: solid 1px #999999;
+  border-radius: 3rem;
+}
+#modal_region .modal-body {
+  font-size: 1.2rem;
+}
+#modal_region ul {
+  list-style: none;
+  padding: 0;
+}
+#modal_region .lither {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: black;
+}
+
+#modal_delivery {
+  padding: 0 !important;
+}
+#modal_delivery .modal-dialog {
+  min-width: 90%;
+  margin: 1rem auto;
+}
+@media (max-width: 575.98px) {
+  #modal_delivery .modal-dialog {
+    min-width: 100%;
+    margin: 0;
+  }
+}
+#modal_delivery .modal-header {
+  padding: 1.5rem 3rem 0 3rem;
+}
+@media (max-width: 575.98px) {
+  #modal_delivery .modal-header {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+  }
+}
+#modal_delivery .nav-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 575.98px) {
+  #modal_delivery .nav-link {
+    padding: 0.8rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+#modal_delivery .nav-link.active {
+  background-color: #3e72aa;
+}
+#modal_delivery .nav-link img {
+  margin-right: 1rem;
+}
+@media (max-width: 575.98px) {
+  #modal_delivery .nav-link img {
+    display: none;
+  }
+}
+#modal_delivery .modal-body {
+  min-height: 60vh !important;
+}
+#modal_delivery h2 {
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: black;
+}
+#modal_delivery h3 {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+#modal_delivery .tab-plane {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+#modal_delivery .hdr {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.12;
+  min-height: 3.5rem;
+}
+#modal_delivery .subhdr {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 1.6rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.12;
+}
+#modal_delivery .dlvr-plane {
+  margin-top: 3rem;
+}
+#modal_delivery .dlvr-plane span {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #666666;
+  margin-bottom: 0.5rem;
+}
+#modal_delivery .dlvr-plane__type {
+  margin-bottom: 1.5rem;
+}
+#modal_delivery .dlvr-plane__type p {
+  display: inline-block;
+  padding: 0.3rem 1.2rem 0.5rem 1.2rem;
+  border-radius: 4px;
+  background-color: #333333;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+#modal_delivery .dlvr-plane__address {
+  margin-bottom: 2rem;
+}
+#modal_delivery .dlvr-plane__address input {
+  width: 60%;
+}
+#modal_delivery .dlvr-plane__price {
+  margin-bottom: 2rem;
+}
+#modal_delivery .dlvr-plane__price p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+#modal_delivery .dlvr-plane__date {
+  margin-bottom: 2rem;
+}
+#modal_delivery .dlvr-plane__date p {
+  font-size: 2.1rem;
+  font-weight: bold;
+  line-height: 1;
+}
+#modal_delivery .install-plane {
+  margin-top: 3rem;
+}
+#modal_delivery .install-plane .install-plane__itemprice {
+  border-bottom: solid 1px #999999;
+  padding-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+#modal_delivery .install-plane .install-plane__itemprice .itemprice_item {
+  font-weight: bold;
+}
+#modal_delivery .install-plane .install-plane__itemprice .itemprice_price {
+  text-align: right;
+  font-weight: bold;
+}
+#modal_delivery .install-plane .install-plane__plane {
+  margin-top: 3rem;
+}
+#modal_delivery .install-plane .install-plane__plane ul {
+  margin-bottom: 3rem;
+}
+
+.policyinfo {
+  position: fixed;
+  z-index: 1030;
+  bottom: -1rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  color: #333333;
+  font-size: 1.4rem;
+  padding: 1rem 6rem 0.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 0 0 16px 0 rgba(33, 33, 33, 0.25);
+  border: solid 1px #ffffff;
+  border-radius: 0;
+  text-align: center;
+}
+@media (max-width: 991.98px) {
+  .policyinfo {
+    bottom: 2.5rem;
+    padding: 2rem 6rem 1rem 2rem;
+  }
+}
+.policyinfo p {
+  line-height: 1.428571429;
+}
+.policyinfo .close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 3rem;
+  font-weight: 300;
 }
 
 H1 {
