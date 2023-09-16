@@ -83,7 +83,21 @@ H3 {
 H1 A, H2 A, .mainhead A {text-decoration:none;}
 
 
+.hdr-flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 
+	@include media-breakpoint-only(xs) {
+		display: block;
+	}
+
+	> * {
+		display: block;
+		margin: 0;
+	}
+
+}
 
 
 
