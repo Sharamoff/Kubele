@@ -8,7 +8,7 @@
 	max-width: none;
 	color: $color-text;
 	font-size: $font-size-base;
-	padding: 1rem 6rem 0.5rem 2rem;
+	padding: 2rem;
 	background-color: rgba(255, 255, 255, 0.85);
 	backdrop-filter: blur(10px);
 	box-shadow: 0 0 16px 0 rgba(33, 33, 33, 0.25);
@@ -17,7 +17,7 @@
 	text-align: center;
 
 	@include media-breakpoint-down(md) {
-		bottom: 2.5rem;
+		bottom: 2.6rem;
 		padding: 2rem 6rem 1rem 2rem;
 	}
 
@@ -25,12 +25,17 @@
 		line-height: $line-height-p;
 	}
 
-	.close {
-		position: absolute;
-		top: 0.5rem;
-		right: 1rem;
-		font-size: 3rem;
-		font-weight: 300;
+	.btn-close {
+		background: $c-gray;
+		color: $c-white;
+		border: none;
+		padding: 0.8rem 2rem 0.6rem 2rem;
+		margin: 0.5rem auto;
+
+		&:hover {
+			background: $color-link-hover;
+		}
+
 	}
 
 }
