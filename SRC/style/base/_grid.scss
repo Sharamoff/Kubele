@@ -71,6 +71,10 @@ BODY {
 			padding-top: 9rem;
 		}
 
+		@include media-breakpoint-down(sm) {
+			padding-top: 5rem;
+		}
+
 	}
 
 	.bkcollage {

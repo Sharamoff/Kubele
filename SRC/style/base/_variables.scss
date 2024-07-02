@@ -1,44 +1,46 @@
 // media
 
-$m-min:				  290px;
-$m-max:				  1140px;
+$m-min:				        290px;
+$m-max:				        1140px;
 
-$content-max:		  1140px;
+$content-max:		      1140px;
 
-$blockpic-max:		  290px;
+$blockpic-max:		    290px;
 
 
 
 // colors
 
-$c-white:               rgb(255, 255, 255);
-$c-black:               rgb(0, 0, 0);
+$c-white:             rgb(255, 255, 255);
+$c-black:             rgb(0, 0, 0);
 
 $c-gray-lightermore:	#cccccc;
-$c-gray-lighter:		#999999;
-$c-gray-light:			#666666;
-$c-gray:				#333333;
-$c-blue-light:			#8baacc;
-$c-blue: 				#3e72aa;
-$c-blue-dark:			#31649b;
-$c-red: 				#96004b;
+$c-gray-lighter:		  #999999;
+$c-gray-light:			  #666666;
+$c-gray:				      #333333;
+$c-blue-light:			  #8baacc;
+$c-blue: 				      #3e72aa;
+$c-blue-dark:			    #31649b;
+$c-red: 				      #96004b;
 
-$color-bk-body:         #4d7fb5;
-$color-bk-header:       $c-gray;
-$color-bk-footer:       $c-gray-lighter;
-$color-bk-page: 		rgba(255,255,255,0.75);
+$color-bk-body:       #4d7fb5;
+$color-bk-header:     $c-gray;
+$color-bk-footer:     $c-gray-lighter;
+$color-bk-page: 		  rgba(255,255,255,0.75);
 
-$color-text:            $c-gray;
-$color-fields:			$c-gray;
-$color-link:            $c-blue;
-$color-link-hover:      $c-red;
-$color-h:      			$c-gray;
-$color-hdr:      		$c-gray;
-$color-note:			$c-gray-light;
-$color-placeholder:     $c-gray-lighter;
-$color-border:			$c-gray-lighter;
+$color-text:          $c-gray;
+$color-fields:			  $c-gray;
+$color-link:          $c-blue;
+$color-link-hover:    $c-red;
+$color-h:      			  $c-gray;
+$color-hdr:      		  $c-gray;
+$color-note:			    $c-gray-light;
+$color-placeholder:   $c-gray-lighter;
+$color-border:			  $c-gray-lighter;
 $color-border-hover:	$c-gray-lightermore;
 $color-border-pic:		$c-white;
+$color-plate:         #f3f3f3;
+$color-plate-dark:    #e9e9e9;
 
 
 

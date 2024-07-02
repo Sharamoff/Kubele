@@ -12,7 +12,7 @@ H1 {
 	margin-top: 5rem;
 	line-height: $line-height-min;
 	text-transform: uppercase;
-	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	//text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 
 	@include media-breakpoint-down(md) {
 		margin-top: 3rem;
@@ -26,14 +26,17 @@ H1 {
 		font-size: 1.8rem;
 		color: $c-gray;
 		line-height: 1.2;
-		margin-top: 6rem;
+		font-weight: 600;
 
 		@include media-breakpoint-down(md) {
 			margin-top: 1.5rem;
 		}
 
 		span {
-			font-size: 1.8rem;
+			display: block;
+
+			font-size: $font-size-basemax;
+			font-weight: normal;
 		}
 
 	}
@@ -100,7 +103,14 @@ H1 A, H2 A, .mainhead A {text-decoration:none;}
 }
 
 
+.md--centered {
 
+	@include media-breakpoint-down(md) {
+		display: block;
+		text-align: center;
+	}
+
+}
 
 
 

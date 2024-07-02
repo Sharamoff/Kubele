@@ -292,9 +292,16 @@ a:hover {
 
 
 
-
 .slick-center img {
 	border: solid 2px $c-white;
+}
+
+
+.slick-dots li button:before {
+	content: "\f192";
+	font-family: $fontawesome;
+	font-size: 8px;
+	line-height: 20px;
 }
 
 
@@ -359,4 +366,81 @@ a:hover {
 
 .tooltip {
 	line-height: 1.1 !important;
+}
+
+.note {
+	font-size: $font-size-basemin;
+	color: $color-note;
+	line-height: $line-height-def !important;
+}
+
+
+
+.block-productwarn {
+	display: block;
+	padding: 1rem 1rem 1rem 1.5rem;
+	background: $c-white;
+	color: $c-black;
+	font-size: $font-size-base;
+
+	&.productwarn--nobk {
+		background: none;
+		border: none;
+		padding: 0.3rem 0 0.3rem 1rem;
+	}
+
+	&.productwarn--cgitemdescript {
+		margin-top: -2rem;
+		margin-bottom: 1rem;
+
+		@include media-breakpoint-down(md) {
+			margin-top: -0.5rem;
+		}
+
+	}
+
+	i {
+		margin-right: 0.6rem;
+	}
+
+	&.warn--red {
+		border-left: solid 2px $c-red;
+
+		i, strong {
+			color: $c-red;
+		}
+
+	}
+
+	&.warn--green {
+		border-left: solid 2px #28a77f;
+
+		i, strong {
+			color: #28a77f;
+		}
+
+	}
+
+	&.warn--blue {
+		border-left: solid 2px $c-blue;
+
+		i, strong {
+			color: $c-blue;
+		}
+
+	}
+
+}
+
+.tdoc {
+	list-style: none;
+	padding-left: 1.8rem;
+
+	i {
+		font-size: $font-size-basemax;
+		text-underline-color: transparent !important;
+		color: $c-gray-light !important;
+		padding-right: 1rem;
+	}
+
 }

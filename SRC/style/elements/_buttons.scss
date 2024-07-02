@@ -261,4 +261,17 @@ button.disabled:hover {
 }
 
 
+.link-more {
+	display: inline-block;
+	white-space: nowrap;
+	padding: 3px 0;
+	margin-top: 0;
+	margin-bottom: 1.5rem;
 
+	&:after {
+		font-family: $fontawesome;
+		font-weight: lighter;
+		content: ' \f178';
+	}
+
+}
