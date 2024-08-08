@@ -3665,6 +3665,28 @@ OL.ol--cont > li:before {
   }
 }
 
+.cgitempic-72h {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 1px;
+  right: 1px;
+  background-color: #31649b;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px;
+  z-index: 2;
+}
+.cgitempic-72h img {
+  border: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
 .cgitempic-prc {
   position: absolute;
   z-index: 2;
@@ -4342,6 +4364,27 @@ OL.ol--cont > li:before {
 }
 .block-cgitemlist-exp .cgitemlist-exp__item {
   position: relative;
+}
+.block-cgitemlist-exp .cgitemlist-exp__item .cgitemlist__72h {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  top: 1px;
+  right: 1px;
+  background-color: #31649b;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  z-index: 2;
+}
+.block-cgitemlist-exp .cgitemlist-exp__item .cgitemlist__72h img {
+  border: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 20px;
+  height: auto;
 }
 .block-cgitemlist-exp .cgitemlist-exp__item .cgitemlist__prc {
   position: absolute;

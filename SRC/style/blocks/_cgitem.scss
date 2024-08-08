@@ -17,6 +17,30 @@
 
 }
 
+.cgitempic-72h {
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	top: 1px;
+	right: 1px;
+	background-color: $c-blue-dark;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 11px;
+	z-index: 2;
+
+	img {
+		border: none;
+		object-fit: cover;
+		width: 100%;
+		height: auto;
+
+	}
+
+}
+
 .cgitempic-prc {
 	position: absolute;
 	z-index: 2;
@@ -796,6 +820,30 @@
 
 	.cgitemlist-exp__item {
 		position: relative;
+
+		.cgitemlist__72h {
+			position: absolute;
+			width: 38px;
+			height: 38px;
+			top: 1px;
+			right: 1px;
+			background-color: $c-blue-dark;
+			background-size: cover;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 2px;
+			z-index: 2;
+
+			img {
+				border: none;
+				object-fit: cover;
+				width: 20px;
+				height: auto;
+
+			}
+
+		}
 
 		.cgitemlist__prc {
 			position: absolute;
