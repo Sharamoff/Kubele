@@ -115,6 +115,7 @@ $('#id_cgitemdescript5').on('shown.bs.collapse', toggleIcon);
 // выключаем звук на видео
 $('.block-video video').prop('muted', true);
 
+
 // запуск видео по hover
 function hoverVideo(e) {
 	$('.video__i-play', this).css('opacity', '0');
@@ -129,8 +130,24 @@ function hideVideo(e) {
 $('.block-video').hover(hoverVideo, hideVideo);
 $('.block-video').on('touchstart', hoverVideo, function (e) {$('video', this).get(0).pause()});
 
-
-
+/*
+// запуск видео по click
+function toggleVideo(e) {
+	let video = $('video', this).get(0);
+	let playIcon = $('.video__i-play', this);
+	
+	if (video.paused) {
+		video.play();
+		video.setAttribute('controls', 'controls');
+		playIcon.css('opacity', '0');
+	} else {
+		video.pause();
+		video.removeAttribute('controls');
+		playIcon.css('opacity', '0.3');
+	}
+}
+$('.block-video').on('click', toggleVideo);
+*/
 
 // слайдер продукта
 
