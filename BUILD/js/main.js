@@ -115,42 +115,47 @@ $('#id_cgitemdescript5').on('shown.bs.collapse', toggleIcon);
 
 
 
-// выключаем звук на видео
-$('.block-video video').prop('muted', true);
-
-
-// запуск видео по hover
+// Запуск видео
 function hoverVideo(e) {
-	$('.video__i-play', this).css('opacity', '0');
-	$('video', this).get(0).play();
-	$('video', this).get(0).setAttribute('controls','controls');
+	$(this).find('video').attr('controls', 'controls');
 }
 function hideVideo(e) {
-	$('.video__i-play', this).css('opacity', '0.3');
-	$('video', this).get(0).pause();
-	$('video', this).get(0).removeAttribute('controls','controls');
+	$(this).find('video').removeAttr('controls');
 }
-$('.block-video').hover(hoverVideo, hideVideo);
-$('.block-video').on('touchstart', hoverVideo, function (e) {$('video', this).get(0).pause()});
 
-/*
-// запуск видео по click
-function toggleVideo(e) {
-	let video = $('video', this).get(0);
-	let playIcon = $('.video__i-play', this);
-	
+function togglePlayButton(video) {
+	let playButton = $(video).siblings('.video__i-play');
 	if (video.paused) {
-		video.play();
-		video.setAttribute('controls', 'controls');
-		playIcon.css('opacity', '0');
+		playButton.css('opacity', '0.33');
 	} else {
-		video.pause();
-		video.removeAttribute('controls');
-		playIcon.css('opacity', '0.3');
+		playButton.css('opacity', '0');
 	}
 }
-$('.block-video').on('click', toggleVideo);
-*/
+
+function startVideo() {
+	// Выключаем звук на видео
+	$('.block-video video').prop('muted', true);
+	
+	$('.block-video').hover(hoverVideo, hideVideo);
+	
+	$('.block-video video').on('play pause', function() {
+		togglePlayButton(this);
+	});
+	
+	$('.video__i-play').on('click', function() {
+		let video = $(this).siblings('video')[0];
+		if (video.paused) {
+			video.play();
+		} else {
+			video.pause();
+		}
+	});
+	
+}
+
+startVideo();
+
+
 
 // слайдер продукта
 
