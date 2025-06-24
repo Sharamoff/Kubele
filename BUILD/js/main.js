@@ -1,6 +1,64 @@
 /* main */
 $(document).ready(function () {
 
+// поиски
+
+$('.ani--search-fld').on('focus', function() {
+	$('.ani--search-btn').addClass('active');
+});
+$('.ani--search-fld').on('blur', function() {
+	$('.ani--search-btn').removeClass('active');
+});
+$('.ani--searchcode-fld').on('focus', function() {
+	$('.ani--searchcode-btn').addClass('active');
+});
+$('.ani--searchcode-fld').on('blur', function() {
+	$('.ani--searchcode-btn').removeClass('active');
+});
+
+$('.fm-search-md #slt_mainsearch').select2({
+	minimumResultsForSearch: -1,
+	dropdownParent: $('.fm-search-md'),
+	templateResult: formatOption
+});
+function formatOption(option) {
+	if (!option.id) return option.text;
+	return $('<span><span class="select2-selected-icon">✓</span>' + option.text + '</span>');
+}
+
+$('.nav-fm_search #slt_mdsearch').select2({
+	minimumResultsForSearch: -1,
+	dropdownParent: $('.nav-fm_search'),
+	templateResult: formatOption
+});
+function formatOption(option) {
+	if (!option.id) return option.text;
+	return $('<span><span class="select2-selected-icon">✓</span>' + option.text + '</span>');
+}
+
+// прячем мобильный поиск
+function mdsearchClose() {
+	if ($(document).width() > 960) {
+		$('.nav-md_search').collapse('hide');
+	}
+}
+mdsearchClose();
+$(window).resize(function() {
+	mdsearchClose();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 //tooltips
 $('[data-toggle="tooltip"]').tooltip();
 $('.toast').toast();

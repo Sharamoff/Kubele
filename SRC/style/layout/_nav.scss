@@ -27,9 +27,9 @@
 				display: none;
 			}
 
-			span {
+			.dropdown-toggle {
 				display: inline-block;
-				padding: 2px 0 0 10px;
+				padding: 2px 5px 0 20px;
 				cursor: pointer;
 			}
 
@@ -91,68 +91,17 @@
 
 	}
 
-
-	.navbar-search {
-		display: none;
-
-		@include media-breakpoint-down(md) {
-			display: block;
-			width: 80%;
-			margin: 0 0 20px -10px;
-		}
-
-		@include media-breakpoint-down(xs) {
-			width: 100%;
-		}
-
-		.fm-search {
-
-			input[type="search"] {
-				color: $c-white !important;
-				border: solid 1px $c-white;
-				background: rgba($c-black, 0.25) url("../img/lupa.svg") right no-repeat;
-				height: 33px;
-				border-radius: 0;
-				padding-left: 1rem !important;
-				padding-right: 3rem !important;
-			}
-
-			@include placeholder {
-				color: $c-white;
-			}
-
-		}
-
-	}
-
-
 	.navbar-search-md {
-		margin: 0 0 0 -0.8rem;
+		margin: 0 0 0 -10rem;
 		padding: 10px;
-		min-width: 30rem;
+		min-width: 50rem;
 		border: none;
 		background-color: rgba(255, 255, 255, 0.75);
+		position: relative;
+		min-height: 115px;
 
 		@include media-breakpoint-only(lg) {
 			margin: -3px 0 0 -12rem;
-		}
-
-		.fm-search-md {
-
-			input[type="search"] {
-				color: $c-white !important;
-				border: solid 1px $c-white;
-				background: rgba($c-black, 0.25) url("../img/lupa.svg") right no-repeat;
-				height: 33px;
-				border-radius: 0;
-				padding-left: 1rem !important;
-				padding-right: 3rem !important;
-			}
-
-			@include placeholder {
-				color: $c-white;
-			}
-
 		}
 
 	}
@@ -272,6 +221,68 @@
 		display: none;
 	}
 
+}
+
+
+.fm-search-md,
+.nav-fm_search {
+	display: flex;
+	align-items: center;
+
+	@include placeholder {
+		color: $c-white;
+	}
+
+	input[type="search"] {
+		flex: 1;
+		width: 100%;
+		color: $c-black !important;
+		background-color: rgba($c-black, 0.20);
+		height: 33px !important;
+		border: solid 1px #cccccc;
+		border-radius: 0;
+		padding: 0 7rem 0 1rem !important;
+
+		&::-webkit-search-cancel-button {
+			-webkit-appearance: none;
+			display: none;
+		}
+
+	}
+
+	input[type="submit"] {
+		background: transparent url("../img/lupa.svg") 100% center no-repeat;
+		color: transparent !important;
+		height: 33px !important;
+		width: 6rem;
+		border: none;
+		border-radius: 0;
+		margin-left: -6rem;
+
+		&:hover {
+			background: rgba($c-black, 0.5);
+			color: $c-white !important;
+		}
+
+		&.active {
+			background: $color-link;
+			color: $c-white !important;
+
+			&:hover {
+				background: $color-link-hover;
+			}
+
+		}
+
+	}
+
+}
+
+
+
+.nav-fm_search {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 
@@ -420,32 +431,96 @@
 }
 
 
-.nav-md_search {
-	display: none;
-	max-width: 30rem;
-	padding: 0.5rem 0 1rem 0;
 
-	@include media-breakpoint-down(md) {
-		display: block;
+
+
+.fm-search-md,
+.nav-fm_search {
+
+	.select2-container {
+		margin-left: 0.5rem;
+		width: 140px !important;
+
+		.select2-selection {
+			height: 33px;
+			border: solid 1px #cccccc;
+			border-radius: 0;
+			color: $c-gray;
+			padding: 0 2rem 0 0.7rem;
+			outline: none;
+			font-size: $font-size-basemin;
+
+			&__rendered {
+				padding: 0;
+				line-height: 31px;
+				color: $c-gray;
+				position: relative;
+			}
+
+			&__arrow {
+				height: 33px;
+				width: 25px;
+
+				b {
+					border-color: $c-gray transparent transparent transparent;
+					border-width: 6px 5px 0 5px;
+					margin-left: -5px;
+					margin-top: -3px;
+				}
+
+			}
+
+		}
+
+		&.select2-container--open {
+			.select2-selection {
+
+				.select2-selection__arrow b {
+					border-color: transparent transparent $c-gray transparent;
+					border-width: 0 3px 6px 5px;
+				}
+			}
+		}
 	}
 
-	@include media-breakpoint-down(xs) {
-		max-width: 100%;
-	}
-
-
-	input[type="search"] {
-		color: $c-white !important;
-		border: solid 1px $c-white;
-		background: rgba($c-black, 0.25) url("../img/lupa.svg") right no-repeat;
-		height: 33px;
+	.select2-dropdown {
+		background-color: $c-white;
 		border-radius: 0;
-		padding-left: 1rem !important;
-		padding-right: 3rem !important;
+		margin-top: -1px;
+		margin-left: -5px;
+		z-index: 9999;
+
+		&--below {
+			border: solid 1px #cccccc;
+			drop-shadow: none;
+		}
+
 	}
 
-	@include placeholder {
-		color: $c-white;
+	.select2-results__option {
+		position: relative;
+		padding: 8px;
+		margin: 0;
+		color: $c-black;
+		font-size: $font-size-basemin;
+		background-color: $c-white;
+
+		&--selected,
+		&--highlighted[aria-selected] {
+			.select2-selected-icon {
+				display: inline-block;
+			}
+		}
+
+		.select2-selected-icon {
+			display: none;
+			position: absolute;
+			right: 8px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: $c-white;
+		}
+
 	}
 
 }

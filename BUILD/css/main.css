@@ -543,9 +543,9 @@ section::after {
     display: none;
   }
 }
-.navbar-custom .navbar-nav .nav-item-md span {
+.navbar-custom .navbar-nav .nav-item-md .dropdown-toggle {
   display: inline-block;
-  padding: 2px 0 0 10px;
+  padding: 2px 5px 0 20px;
   cursor: pointer;
 }
 .navbar-custom .navbar-nav .nav-link {
@@ -590,74 +590,19 @@ section::after {
   background-color: #3e72aa;
   color: white;
 }
-.navbar-custom .navbar-search {
-  display: none;
-}
-@media (max-width: 991.98px) {
-  .navbar-custom .navbar-search {
-    display: block;
-    width: 80%;
-    margin: 0 0 20px -10px;
-  }
-}
-@media (max-width: 575.98px) {
-  .navbar-custom .navbar-search {
-    width: 100%;
-  }
-}
-.navbar-custom .navbar-search .fm-search input[type=search] {
-  color: white !important;
-  border: solid 1px white;
-  background: rgba(0, 0, 0, 0.25) url("../img/lupa.svg") right no-repeat;
-  height: 33px;
-  border-radius: 0;
-  padding-left: 1rem !important;
-  padding-right: 3rem !important;
-}
-.navbar-custom .navbar-search .fm-search ::-webkit-input-placeholder {
-  color: white;
-}
-.navbar-custom .navbar-search .fm-search :-moz-placeholder {
-  color: white;
-}
-.navbar-custom .navbar-search .fm-search ::-moz-placeholder {
-  color: white;
-}
-.navbar-custom .navbar-search .fm-search :-ms-input-placeholder {
-  color: white;
-}
 .navbar-custom .navbar-search-md {
-  margin: 0 0 0 -0.8rem;
+  margin: 0 0 0 -10rem;
   padding: 10px;
-  min-width: 30rem;
+  min-width: 50rem;
   border: none;
   background-color: rgba(255, 255, 255, 0.75);
+  position: relative;
+  min-height: 115px;
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .navbar-custom .navbar-search-md {
     margin: -3px 0 0 -12rem;
   }
-}
-.navbar-custom .navbar-search-md .fm-search-md input[type=search] {
-  color: white !important;
-  border: solid 1px white;
-  background: rgba(0, 0, 0, 0.25) url("../img/lupa.svg") right no-repeat;
-  height: 33px;
-  border-radius: 0;
-  padding-left: 1rem !important;
-  padding-right: 3rem !important;
-}
-.navbar-custom .navbar-search-md .fm-search-md ::-webkit-input-placeholder {
-  color: white;
-}
-.navbar-custom .navbar-search-md .fm-search-md :-moz-placeholder {
-  color: white;
-}
-.navbar-custom .navbar-search-md .fm-search-md ::-moz-placeholder {
-  color: white;
-}
-.navbar-custom .navbar-search-md .fm-search-md :-ms-input-placeholder {
-  color: white;
 }
 .navbar-custom .navbar-toggler {
   width: 28px;
@@ -751,6 +696,73 @@ section::after {
 .navbar-custom .nav-btn_search,
 .navbar-custom .nav-btn_cart {
   display: none;
+}
+
+.fm-search-md,
+.nav-fm_search {
+  display: flex;
+  align-items: center;
+}
+.fm-search-md ::-webkit-input-placeholder,
+.nav-fm_search ::-webkit-input-placeholder {
+  color: white;
+}
+.fm-search-md :-moz-placeholder,
+.nav-fm_search :-moz-placeholder {
+  color: white;
+}
+.fm-search-md ::-moz-placeholder,
+.nav-fm_search ::-moz-placeholder {
+  color: white;
+}
+.fm-search-md :-ms-input-placeholder,
+.nav-fm_search :-ms-input-placeholder {
+  color: white;
+}
+.fm-search-md input[type=search],
+.nav-fm_search input[type=search] {
+  flex: 1;
+  width: 100%;
+  color: black !important;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 33px !important;
+  border: solid 1px #cccccc;
+  border-radius: 0;
+  padding: 0 7rem 0 1rem !important;
+}
+.fm-search-md input[type=search]::-webkit-search-cancel-button,
+.nav-fm_search input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  display: none;
+}
+.fm-search-md input[type=submit],
+.nav-fm_search input[type=submit] {
+  background: transparent url("../img/lupa.svg") 100% center no-repeat;
+  color: transparent !important;
+  height: 33px !important;
+  width: 6rem;
+  border: none;
+  border-radius: 0;
+  margin-left: -6rem;
+}
+.fm-search-md input[type=submit]:hover,
+.nav-fm_search input[type=submit]:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: white !important;
+}
+.fm-search-md input[type=submit].active,
+.nav-fm_search input[type=submit].active {
+  background: #3e72aa;
+  color: white !important;
+}
+.fm-search-md input[type=submit].active:hover,
+.nav-fm_search input[type=submit].active:hover {
+  background: #96004b;
+}
+
+.nav-fm_search {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 991.98px) {
@@ -859,40 +871,79 @@ section::after {
   display: none;
 }
 
-.nav-md_search {
-  display: none;
-  max-width: 30rem;
-  padding: 0.5rem 0 1rem 0;
+.fm-search-md .select2-container,
+.nav-fm_search .select2-container {
+  margin-left: 0.5rem;
+  width: 140px !important;
 }
-@media (max-width: 991.98px) {
-  .nav-md_search {
-    display: block;
-  }
-}
-@media (max-width: 575.98px) {
-  .nav-md_search {
-    max-width: 100%;
-  }
-}
-.nav-md_search input[type=search] {
-  color: white !important;
-  border: solid 1px white;
-  background: rgba(0, 0, 0, 0.25) url("../img/lupa.svg") right no-repeat;
+.fm-search-md .select2-container .select2-selection,
+.nav-fm_search .select2-container .select2-selection {
   height: 33px;
+  border: solid 1px #cccccc;
   border-radius: 0;
-  padding-left: 1rem !important;
-  padding-right: 3rem !important;
+  color: #333333;
+  padding: 0 2rem 0 0.7rem;
+  outline: none;
+  font-size: 1.2rem;
 }
-.nav-md_search ::-webkit-input-placeholder {
-  color: white;
+.fm-search-md .select2-container .select2-selection__rendered,
+.nav-fm_search .select2-container .select2-selection__rendered {
+  padding: 0;
+  line-height: 31px;
+  color: #333333;
+  position: relative;
 }
-.nav-md_search :-moz-placeholder {
-  color: white;
+.fm-search-md .select2-container .select2-selection__arrow,
+.nav-fm_search .select2-container .select2-selection__arrow {
+  height: 33px;
+  width: 25px;
 }
-.nav-md_search ::-moz-placeholder {
-  color: white;
+.fm-search-md .select2-container .select2-selection__arrow b,
+.nav-fm_search .select2-container .select2-selection__arrow b {
+  border-color: #333333 transparent transparent transparent;
+  border-width: 6px 5px 0 5px;
+  margin-left: -5px;
+  margin-top: -3px;
 }
-.nav-md_search :-ms-input-placeholder {
+.fm-search-md .select2-container.select2-container--open .select2-selection .select2-selection__arrow b,
+.nav-fm_search .select2-container.select2-container--open .select2-selection .select2-selection__arrow b {
+  border-color: transparent transparent #333333 transparent;
+  border-width: 0 3px 6px 5px;
+}
+.fm-search-md .select2-dropdown,
+.nav-fm_search .select2-dropdown {
+  background-color: white;
+  border-radius: 0;
+  margin-top: -1px;
+  margin-left: -5px;
+  z-index: 9999;
+}
+.fm-search-md .select2-dropdown--below,
+.nav-fm_search .select2-dropdown--below {
+  border: solid 1px #cccccc;
+  drop-shadow: none;
+}
+.fm-search-md .select2-results__option,
+.nav-fm_search .select2-results__option {
+  position: relative;
+  padding: 8px;
+  margin: 0;
+  color: black;
+  font-size: 1.2rem;
+  background-color: white;
+}
+.fm-search-md .select2-results__option--selected .select2-selected-icon, .fm-search-md .select2-results__option--highlighted[aria-selected] .select2-selected-icon,
+.nav-fm_search .select2-results__option--selected .select2-selected-icon,
+.nav-fm_search .select2-results__option--highlighted[aria-selected] .select2-selected-icon {
+  display: inline-block;
+}
+.fm-search-md .select2-results__option .select2-selected-icon,
+.nav-fm_search .select2-results__option .select2-selected-icon {
+  display: none;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   color: white;
 }
 
@@ -1024,10 +1075,46 @@ section::after {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.footer .footer-codesearch input[type=search] {
+.footer .fm-codesearch {
+  display: flex;
+  align-items: center;
+}
+.footer .fm-codesearch input[type=search] {
+  -webkit-appearance: none;
+  height: 3rem !important;
+  width: 100%;
+  padding: 0 6rem 0 0.7rem !important;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 0;
   font-size: 1.2rem !important;
-  height: 2.5rem !important;
-  background: rgba(255, 255, 255, 0.8) url("../img/lupa-cc.svg") right no-repeat;
+}
+.footer .fm-codesearch input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  display: none;
+}
+.footer .fm-codesearch input[type=submit] {
+  height: 3rem !important;
+  width: 5.5rem;
+  background: transparent url("../img/lupa-cc.svg") 85% center no-repeat;
+  color: transparent !important;
+  border: none;
+  border-radius: 0;
+  margin-left: -5.5rem;
+  font-size: 1.2rem !important;
+}
+.footer .fm-codesearch input[type=submit]:hover {
+  background: #333333 !important;
+  color: white !important;
+  border: solid 1px white !important;
+}
+.footer .fm-codesearch input[type=submit].active {
+  background: #3e72aa;
+  color: white !important;
+  border: solid 1px white !important;
+}
+.footer .fm-codesearch input[type=submit].active:hover {
+  background: #333333 !important;
 }
 .footer .footer-links {
   padding: 0;
@@ -3312,7 +3399,7 @@ OL.ol--cont > li:before {
     position: relative;
     z-index: 3;
     margin-top: -12rem;
-    margin-left: -15px;
+    min-width: 100%;
   }
 }
 .block-servbtn-idx .servbtn-idx {

@@ -68,6 +68,7 @@
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#id_main-nav" aria-controls="id_main-nav" aria-expanded="false" aria-label="Меню">
 						<div class="navbar-toggler__icon"></div>
 					</button>
+					</button>
 				
 				
 					<button class="nav-btn_search" data-toggle="collapse" data-target="#id_md_search" aria-expanded="false" aria-controls="id_md_search" title="Поиск по сайту"><i class="far fa-search"></i></button>
@@ -77,8 +78,13 @@
 				
 				
 					<div class="collapse nav-md_search" id="id_md_search">
-						<form>
-							<input class="form-control" type="search" placeholder="Поиск по сайту">
+						<form class="nav-fm_search">
+							<input id="fld_mdsearch" type="search" class="ani--search-fld" placeholder="Поиск по сайту" autocomplete="off">
+							<input id="btn_mdsearch" type="submit" class="ani--search-btn" title="Найти" value="Найти">
+							<select id="slt_mdsearch">
+								<option value="all">искать везде</option>
+								<option value="catalog" selected>искать в каталоге</option>
+							</select>
 						</form>
 					</div>
 				
@@ -89,72 +95,59 @@
 				
 						<a href="tel:88004442726" class="navbar-phone" title="Позвоните нам">8&nbsp;800&nbsp;<strong>444-27-26</strong></a>
 				
-						<a href="#" class="navbar-cart" title="Товаров в корзине">
+						<a href="/catalogue/cart/" class="navbar-cart" title="Товаров в корзине">
 							<i class="far fa-shopping-cart"></i>
-							<span>Товаров в корзине:&nbsp;</span><strong>96</strong>
+							<span>Товаров в корзине:&nbsp;</span><strong rel="cart_num">0</strong>
 						</a>
 				
 						<ul class="navbar-nav mr-auto">
+							<li class="nav-item">
+								<a href="/catalogue/filter/" id="id_main-nav1" class="nav-link link-hovered" role="button" aria-haspopup="true" aria-expanded="false">Каталог</a>
+							</li>
 							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle link-hovered" href="#" id="id_main-nav1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Каталог</a>
-								<div class="dropdown-menu" aria-labelledby="id_main-nav1">
-									<a class="dropdown-item" href="#">Душевые ограждения четверть круга</a>
-									<a class="dropdown-item" href="#">Душевые ограждения квадратные</a>
-									<a class="dropdown-item" href="#">Душевые ограждения прямоугольные</a>
-									<a class="dropdown-item" href="#">Душевые ограждения п-образные</a>
-									<a class="dropdown-item" href="#">Двери в душевые ниши</a>
-									<a class="dropdown-item" href="#">Шторки в ванну прямоугольные</a>
-									<a class="dropdown-item" href="#">Шторки в ванну асимметричные</a>
-									<a class="dropdown-item" href="#">Шторки в ванну симметричные</a>
-									<a class="dropdown-item" href="#">Поддоны для душа четверть круга</a>
-									<a class="dropdown-item" href="#">Поддоны для душа квадратные</a>
-									<a class="dropdown-item" href="#">Поддоны для душа пятиугольные</a>
-									<a class="dropdown-item" href="#">Поддоны для душа прямоугольные</a>
+								<a href="#" id="id_main-nav10" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">О компании</a>
+								<div class="dropdown-menu" aria-labelledby="id_main-nav10">
+									<a href="/about/" class="dropdown-item">О нас</a>
+									<a href="/about/news/" class="dropdown-item">Новости</a>
+									<a href="/about/exhibitions/" class="dropdown-item">Выставки</a>
+									<a href="/about/press/" class="dropdown-item">Пресса</a>
+									<a href="/about/contacts/" class="dropdown-item">Контакты</a>
+									<a href="/portfolio/" class="dropdown-item">Портфолио</a>
 								</div>
 							</li>
 							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle link-hovered" href="#" id="id_main-nav2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">О компании</a>
-								<div class="dropdown-menu" aria-labelledby="id_main-nav2">
-									<a class="dropdown-item" href="#">Контакты</a>
-									<a class="dropdown-item" href="#">Новости</a>
-									<a class="dropdown-item" href="#">Пресса</a>
-									<a class="dropdown-item" href="#">Выставки</a>
-								</div>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle link-hovered" href="#" id="id_main-nav3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Сервис</a>
+								<a href="#" id="id_main-nav3" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Сервис</a>
 								<div class="dropdown-menu" aria-labelledby="id_main-nav3">
-									<a class="dropdown-item" href="#">Скачать</a>
-									<a class="dropdown-item" href="#">Где купить</a>
-									<a class="dropdown-item" href="#">Гарантия</a>
-									<a class="dropdown-item" href="#">Заказать запчасти</a>
-									<a class="dropdown-item" href="#">Сертификаты</a>
-									<a class="dropdown-item" href="#">FAQ</a>
+									<a href="/service/adjusters/" class="dropdown-item">Монтаж</a>
+									<a href="/service/guarantee/" class="dropdown-item">Гарантия</a>
+									<a href="/service/order-parts/" class="dropdown-item">Заказать запчасти</a>
+									<a href="/service/download/" class="dropdown-item">Скачать</a>
+									<a href="/service/video/" class="dropdown-item">Видео</a>
+									<a href="/service/certificates/" class="dropdown-item">Сертификаты</a>
+									<a href="/service/faq/" class="dropdown-item">Часто задаваемые вопросы</a>
+									<a href="/service/dilery/" class="dropdown-item">Где купить</a>
 								</div>
 							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link link-hovered" href="#" id="id_main-nav4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Доставка</a>
+							<li class="nav-item">
+								<a href="/delivery/" id="id_main-nav37" class="nav-link" role="button" aria-expanded="false">Доставка</a>
 							</li>
 							<li class="nav-item dropdown">
-								<a class="nav-link link-hovered" href="#" id="id_main-nav5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Оплата</a>
+								<a href="/payment/" id="id_main-nav38" class="nav-link" role="button" aria-expanded="false">Оплата</a>
 							</li>
 							<li class="nav-item dropdown nav-item-md">
 								<span class="dropdown-toggle" id="id_main-nav6" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/b-lupa.svg" alt="Поиск по сайту"></span>
 								<div class="navbar-search-md dropdown-menu" aria-labelledby="id_main-nav6">
 									<form class="fm-search-md">
-										<input class="form-control" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+										<input id="fld_mainsearch" type="search" class="ani--search-fld" placeholder="Поиск по сайту" autocomplete="off">
+										<input id="btn_mainsearch" type="submit" class="ani--search-btn" title="Найти" value="Найти">
+										<select id="slt_mainsearch">
+											<option value="all">искать везде</option>
+											<option value="catalog" selected>искать в каталоге</option>
+										</select>
 									</form>
 								</div>
 							</li>
 						</ul>
-				
-						<!--
-						<div class="navbar-search">
-							<form class="fm-search">
-								<input class="form-control" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
-							</form>
-						</div>
-						-->
 				
 						<a href="#" class="navbar-cab">Личный кабинет</a>
 				
@@ -345,18 +338,15 @@
 		<div class="col-lg-5 col-md-12 col-sm-6 col-xs-12 footer-r">
 
 			<ul class="footer-socicons">
-				<li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
 				<li><a href="#" title="ВКонтакте"><i class="fab fa-vk"></i></a></li>
-				<li><a href="#" title="Одноклассники"><i class="fab fa-odnoklassniki"></i></a></li>
 				<li><a href="#" title="YouTube"><i class="fab fa-youtube"></i></a></li>
-				<li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-				<li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
 			</ul>
 
 			<ul class="footer-codesearch">
 				<li>
 					<form class="fm-codesearch">
-						<input class="form-control" type="search" placeholder="Поиск по коду товара" aria-label="Поиск по коду товара">
+						<input id="fld_searchcode" class="ani--searchcode-fld" type="search" placeholder="Поиск по коду товара">
+						<input id="btn_searchcode" class="ani--searchcode-btn" type="submit" value="Найти">
 					</form>
 				</li>
 			</ul>
@@ -366,7 +356,7 @@
 				<li><a href="#">Политика конфендициальности</a></li>
 			</ul>
 
-			<div class="footer-copy">© 2019 Kubele</div>
+			<div class="footer-copy">© 2018 — 2025 Kubele</div>
 
 		</div>
 

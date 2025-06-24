@@ -136,16 +136,62 @@
 			width: 90%;
 		}
 
-
 		> li {
 			margin-top: 5px;
 			margin-bottom: 5px;
 		}
 
+	}
+
+	.fm-codesearch {
+		display: flex;
+		align-items: center;
+
 		input[type="search"] {
+			-webkit-appearance: none;
+			height: 3rem !important;
+			width: 100%;
+			padding: 0 6rem 0 0.7rem !important;
+			background: transparentize($c-white, 0.15);
+			border: none;
+			border-radius: 0;
 			font-size: $font-size-basemin !important;
-			height: 2.5rem !important;
-			background: transparentize($c-white,0.2) url("../img/lupa-cc.svg") right no-repeat;
+
+			&::-webkit-search-cancel-button {
+				-webkit-appearance: none;
+				display: none;
+			}
+
+		}
+
+		input[type="submit"] {
+			height: 3rem !important;
+			width: 5.5rem;
+			background: transparent url("../img/lupa-cc.svg") 85% center no-repeat;
+			color: transparent !important;
+			border: none;
+			border-radius: 0;
+			margin-left: -5.5rem;
+			font-size: $font-size-basemin !important;
+
+
+			&:hover {
+				background: $c-gray !important;
+				color: $c-white !important;
+				border: solid 1px $c-white !important;
+			}
+
+			&.active {
+				background: $color-link;
+				color: $c-white !important;
+				border: solid 1px $c-white !important;
+
+				&:hover {
+					background: $c-gray !important;
+				}
+
+			}
+
 		}
 
 	}
