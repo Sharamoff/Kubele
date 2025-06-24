@@ -591,11 +591,11 @@ section::after {
   color: white;
 }
 .navbar-custom .navbar-search-md {
-  margin: 0 0 0 -10rem;
-  padding: 10px;
+  margin: 0 0 0 -15rem;
+  padding: 0;
   min-width: 50rem;
   border: none;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: transparent;
   position: relative;
   min-height: 115px;
 }
@@ -724,9 +724,9 @@ section::after {
   flex: 1;
   width: 100%;
   color: black !important;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.25);
   height: 33px !important;
-  border: solid 1px #cccccc;
+  border: solid 1px #bbbbbb;
   border-radius: 0;
   padding: 0 7rem 0 1rem !important;
 }
@@ -758,6 +758,12 @@ section::after {
 .fm-search-md input[type=submit].active:hover,
 .nav-fm_search input[type=submit].active:hover {
   background: #96004b;
+}
+
+.fm-search-md {
+  position: relative;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 10px;
 }
 
 .nav-fm_search {
